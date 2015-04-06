@@ -4,7 +4,7 @@
 DOC_MODULE=libplanner
 
 # The top-level SGML file.
-DOC_MAIN_SGML_FILE=libplanner-docs.sgml
+DOC_MAIN_SGML_FILE=libplanner-docs.xml
 
 # The directory containing the source code. Relative to $(srcdir)
 DOC_SOURCE_DIR=../../libplanner
@@ -16,7 +16,7 @@ SCANGOBJ_OPTIONS=
 #SCAN_OPTIONS=--deprecated-guards="GTK_ENABLE_BROKEN|GTK_DISABLE_DEPRECATED" 
 
 # Extra options to supply to gtkdoc-mkdb
-MKDB_OPTIONS=--sgml-mode --output-format=xml
+MKDB_OPTIONS=--xml-mode --output-format=xml
 
 # Extra options to supply to gtkdoc-fixref
 #FIXXREF_OPTIONS=--extra-dir=../file-modules/html --extra-dir=../file-modules/html
