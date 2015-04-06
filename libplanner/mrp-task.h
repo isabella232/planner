@@ -40,6 +40,12 @@
 #define MRP_TYPE_RELATION               (mrp_relation_get_type ())
 
 typedef struct _MrpTaskClass MrpTaskClass;
+/**
+ * MrpTaskPriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpTaskPriv  MrpTaskPriv;
 
 /*

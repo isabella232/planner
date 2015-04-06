@@ -31,6 +31,16 @@
 #define MRP_TYPE_PROPERTY_TYPE (mrp_property_type_get_type ())
 #define MRP_TYPE_STRING_LIST   (mrp_string_list_get_type ())
 
+/**
+ * MrpRelationType:
+ * @MRP_RELATION_NONE: invalid relation type (unset)
+ * @MRP_RELATION_FS: finish to start
+ * @MRP_RELATION_FF: finish to finish (unimplemented)
+ * @MRP_RELATION_SS: start to start (unimplemented)
+ * @MRP_RELATION_SF: start to finish (unimplemented)
+ *
+ * The type of relation.
+ */
 typedef enum {
 	MRP_RELATION_NONE = 0, /* unset */
 	MRP_RELATION_FS,       /* finish-to-start */
@@ -39,6 +49,16 @@ typedef enum {
 	MRP_RELATION_SF        /* start-to-finish */
 } MrpRelationType;
 
+/**
+ * MrpConstraintType:
+ * @MRP_CONSTRAINT_ASAP: as soon as possible
+ * @MRP_CONSTRAINT_ALAP: as late as possible (unimplemented)
+ * @MRP_CONSTRAINT_SNET: start no eariler than
+ * @MRP_CONSTRAINT_FNLT: finish no later than (unimplemented)
+ * @MRP_CONSTRAINT_MSO: must start on
+ *
+ * The type of constraint for the task. The default is %MRP_CONSTRAINT_ASAP.
+ */
 typedef enum {
 	MRP_CONSTRAINT_ASAP = 0, /* as-soon-as-possible */
 	MRP_CONSTRAINT_ALAP,     /* as-late-as-possible */
@@ -63,10 +83,37 @@ typedef enum {
 } MrpTaskSched;
 
 
+/**
+ * MrpTask:
+ *
+ * Object representing a task in the project.
+ */
 typedef struct _MrpTask       MrpTask;
+/**
+ * MrpResource:
+ *
+ * Object representing a task in the project.
+ */
 typedef struct _MrpResource   MrpResource;
+/**
+ * MrpGroup:
+ *
+ * Object representing a resource group.
+ */
 typedef struct _MrpGroup      MrpGroup;
+/**
+ * MrpAssignment:
+ *
+ * Represents an assignment, i.e. the assignment of a task to a resource.
+ */
 typedef struct _MrpAssignment MrpAssignment;
+/**
+ * MrpConstraint:
+ * @type:
+ * @time:
+ *
+ * A struct representing a scheduling constraint on a task.
+ */
 typedef struct _MrpConstraint MrpConstraint;
 
 GType   mrp_relation_type_get_type (void) G_GNUC_CONST;

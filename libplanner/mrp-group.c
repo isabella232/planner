@@ -20,6 +20,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-group
+ * @Title: MrpGroup
+ */
+
 #include <config.h>
 #include "string.h"
 #include <glib/gi18n.h>

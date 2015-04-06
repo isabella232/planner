@@ -21,6 +21,21 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-calendar
+ * @Short_description: represents a calendar in the project.
+ * @Title: MrpCalendar
+ *
+ * A calendar contains the information on working/nonworking time for
+ * resources. A calendar has a default week, specifying the day types
+ * (#MrpDay) used for each day of the week by default.
+ *
+ *
+ * Day types can be overriden so that a working day
+ * has another set of working time intervals per calendar. Certain dates
+ * can be overridden to use another day type as well.
+ */
+
 #include <config.h>
 #include <string.h>
 
@@ -139,6 +154,10 @@ calendar_class_init (MrpCalendarClass *klass)
 	object_class->get_property = calendar_get_property;
 	object_class->set_property = calendar_set_property;
 
+    /**
+     * MrpCalendar::calendar-changed:
+     * @mrpcalendar: the object which received the signal.
+     */
 	signals[CALENDAR_CHANGED] =
 		g_signal_new ("calendar-changed",
 			      G_TYPE_FROM_CLASS (klass),

@@ -20,6 +20,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-error
+ * @Title: MrpError
+ */
+
 #include <config.h>
 #include "mrp-error.h"
 

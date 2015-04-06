@@ -25,6 +25,11 @@
 
 #define MRP_TYPE_DAY               (mrp_day_get_type ())
 
+/**
+ * MrpDay:
+ *
+ * Object representing a day in the project.
+ */
 typedef struct _MrpDay MrpDay;
 
 #include <libplanner/mrp-project.h>

@@ -25,8 +25,30 @@
 
 #include <glib.h>
 
+/**
+ * MRP_ERROR:
+ *
+ * Error domain for libmrproject.
+ */
 #define MRP_ERROR mrp_error_quark ()
 
+/**
+ * MrpError:
+ * @MRP_ERROR_TASK_RELATION_FAILED:
+ * @MRP_ERROR_TASK_MOVE_FAILED:
+ * @MRP_ERROR_LOAD_FILE_DONT_EXIST:
+ * @MRP_ERROR_LOAD_FILE_INVALID:
+ * @MRP_ERROR_SAVE_FILE_EXIST:
+ * @MRP_ERROR_SAVE_FILE_CHANGED:
+ * @MRP_ERROR_EXPORT_UNSUPPORTED:
+ * @MRP_ERROR_EXPORT_FAILED:
+ * @MRP_ERROR_NO_FILE_MODULE:
+ * @MRP_ERROR_SAVE_WRITE_FAILED:
+ * @MRP_ERROR_INVALID_URI:
+ * @MRP_ERROR_FAILED:
+ *
+ * Error codes returned by libmrproject functions.
+ */
 typedef enum {
         MRP_ERROR_TASK_RELATION_FAILED,
         MRP_ERROR_TASK_MOVE_FAILED,

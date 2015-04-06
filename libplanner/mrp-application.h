@@ -32,8 +32,23 @@
 #define MRP_IS_APPLICATION_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MRP_TYPE_APPLICATION))
 #define MRP_APPLICATION_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_APPLICATION, MrpApplicationClass))
 
+/**
+ * MrpApplication:
+ * @parent:
+ * @priv:
+ *
+ * Object representing the application using libmrproject. You need to
+ * create an #MrpApplication object to create projects and use
+ * libmrproject.
+ */
 typedef struct _MrpApplication      MrpApplication;
 typedef struct _MrpApplicationClass MrpApplicationClass;
+/**
+ * MrpApplicationPriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpApplicationPriv  MrpApplicationPriv;
 
 struct _MrpApplication {

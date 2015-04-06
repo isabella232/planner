@@ -36,6 +36,12 @@
 #define MRP_RESOURCE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_RESOURCE, MrpResourceClass))
 
 typedef struct _MrpResourceClass MrpResourceClass;
+/**
+ * MrpResourcePriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpResourcePriv  MrpResourcePriv;
 
 #include <libplanner/mrp-calendar.h>
@@ -49,6 +55,14 @@ struct _MrpResourceClass {
         MrpObjectClass parent_class;
 };
 
+/**
+ * MrpResourceType:
+ * @MRP_RESOURCE_TYPE_NONE: invalid type (unset)
+ * @MRP_RESOURCE_TYPE_WORK: work resource
+ * @MRP_RESOURCE_TYPE_MATERIAL: material resource
+ *
+ * The type of the resource, work or material.
+ */
 typedef enum {
 	MRP_RESOURCE_TYPE_NONE,
 	MRP_RESOURCE_TYPE_WORK,

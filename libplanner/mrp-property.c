@@ -21,6 +21,16 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-property
+ * @Short_description: represents a custom property in the project.
+ * @Title: MrpProperty
+ *
+ * MrpProperty is a typedef to #GParamSpec. It is used to add properties to
+ * projects, resources and tasks in run time, for example by the user of a
+ * GUI application, or plugins that add functionality.
+ */
+
 #include <config.h>
 
 #include "mrp-private.h"

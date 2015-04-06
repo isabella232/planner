@@ -29,8 +29,28 @@
 #define MRP_PROPERTY(x)    ((MrpProperty *) x)
 #define MRP_TYPE_PROPERTY  (mrp_property_get_type ())
 
+/**
+ * MrpProperty:
+ *
+ * Object representing a custom property in the project.
+ */
 typedef GParamSpec MrpProperty;
 
+/**
+ * MrpPropertyType:
+ * @MRP_PROPERTY_TYPE_NONE: invalid (unset type)
+ * @MRP_PROPERTY_TYPE_INT: integer type
+ * @MRP_PROPERTY_TYPE_FLOAT: float type
+ * @MRP_PROPERTY_TYPE_STRING: string type
+ * @MRP_PROPERTY_TYPE_STRING_LIST: not implemented
+ * @MRP_PROPERTY_TYPE_DATE: date type
+ * @MRP_PROPERTY_TYPE_DURATION: duration type
+ * @MRP_PROPERTY_TYPE_COST: cost type (float)
+ *
+ * The different types of custom properties. Cost and duration are simply
+ * float and integer values, but the extra information provided makes it
+ * possible to format the values properly in a GUI.
+ */
 typedef enum {
 	MRP_PROPERTY_TYPE_NONE,
 	MRP_PROPERTY_TYPE_INT,

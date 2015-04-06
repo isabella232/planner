@@ -21,6 +21,12 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-task
+ * @Short_description: represents a task in the project.
+ * @Title: MrpTask
+ */
+
 #include <config.h>
 #include <string.h>
 #include "mrp-marshal.h"
@@ -215,6 +221,12 @@ task_class_init (MrpTaskClass *klass)
 
 	mrp_object_class->removed  = task_removed;
 
+    /**
+     * MrpTask::task-moved:
+     * @mrptask: the object which received the signal.
+     * @arg1:
+     * @arg2:
+     */
 	signals[TASK_MOVED] =
 		g_signal_new ("task_moved",
 			      G_TYPE_FROM_CLASS (klass),
@@ -224,6 +236,11 @@ task_class_init (MrpTaskClass *klass)
 			      mrp_marshal_VOID__OBJECT_INT,
 			      G_TYPE_NONE, 2, MRP_TYPE_TASK, G_TYPE_INT);
 
+    /**
+     * MrpTask::relation-added:
+     * @mrptask: the object which received the signal.
+     * @arg1:
+     */
 	signals[RELATION_ADDED] =
 		g_signal_new ("relation_added",
 			      G_TYPE_FROM_CLASS (klass),
@@ -233,6 +250,11 @@ task_class_init (MrpTaskClass *klass)
 			      mrp_marshal_VOID__POINTER,
 			      G_TYPE_NONE, 1, G_TYPE_POINTER);
 
+    /**
+     * MrpTask::relation-removed:
+     * @mrptask: the object which received the signal.
+     * @arg1:
+     */
 	signals[RELATION_REMOVED] =
 		g_signal_new ("relation_removed",
 			      G_TYPE_FROM_CLASS (klass),
@@ -242,6 +264,11 @@ task_class_init (MrpTaskClass *klass)
 			      mrp_marshal_VOID__POINTER,
 			      G_TYPE_NONE, 1, G_TYPE_POINTER);
 
+    /**
+     * MrpTask::assignment-added:
+     * @mrptask: the object which received the signal.
+     * @arg1:
+     */
 	signals[ASSIGNMENT_ADDED] =
 		g_signal_new ("assignment_added",
 			      G_TYPE_FROM_CLASS (klass),
@@ -252,6 +279,11 @@ task_class_init (MrpTaskClass *klass)
 			      G_TYPE_NONE,
 			      1, MRP_TYPE_ASSIGNMENT);
 
+    /**
+     * MrpTask::assignment-removed:
+     * @mrptask: the object which received the signal.
+     * @arg1:
+     */
 	signals[ASSIGNMENT_REMOVED] =
 		g_signal_new ("assignment_removed",
 			      G_TYPE_FROM_CLASS (klass),
@@ -262,6 +294,10 @@ task_class_init (MrpTaskClass *klass)
 			      G_TYPE_NONE,
 			      1, MRP_TYPE_ASSIGNMENT);
 
+    /**
+     * MrpTask::child-added:
+     * @mrptask: the object which received the signal.
+     */
 	signals[CHILD_ADDED] =
 		g_signal_new ("child_added",
 			      G_TYPE_FROM_CLASS (klass),
@@ -271,6 +307,10 @@ task_class_init (MrpTaskClass *klass)
 			      mrp_marshal_VOID__VOID,
 			      G_TYPE_NONE, 0);
 
+    /**
+     * MrpTask::child-removed:
+     * @mrptask: the object which received the signal.
+     */
 	signals[CHILD_REMOVED] =
 		g_signal_new ("child_removed",
 			      G_TYPE_FROM_CLASS (klass),

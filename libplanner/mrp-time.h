@@ -29,10 +29,30 @@
 #include <glib.h>
 #include <glib-object.h>
 
+/**
+ * mrptime:
+ *
+ * Corresponds to the standard C <type>time_t</type> type.
+ */
 typedef long mrptime;
 
+/**
+ * MRP_TIME_INVALID:
+ *
+ * Represents an invalid #mrptime value.
+ */
 #define MRP_TIME_INVALID 0
+/**
+ * MRP_TIME_MIN:
+ *
+ * Represents the minimum value for #mrptime.
+ */
 #define MRP_TIME_MIN 0
+/**
+ * MRP_TIME_MAX:
+ *
+ * Represents the maximium value for #mrptime.
+ */
 #define MRP_TIME_MAX 2147483647
 
 typedef enum {

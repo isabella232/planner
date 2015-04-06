@@ -39,9 +39,25 @@
 
 #define MRP_TYPE_INTERVAL               (mrp_interval_get_type ())
 
+/**
+ * MrpCalendar:
+ *
+ * Object representing a calendar in the project.
+ */
 typedef struct _MrpCalendar         MrpCalendar;
 typedef struct _MrpCalendarClass    MrpCalendarClass;
+/**
+ * MrpCalendarPriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpCalendarPriv     MrpCalendarPriv;
+/**
+ * MrpInterval:
+ *
+ * Represents a time interval.
+ */
 typedef struct _MrpInterval         MrpInterval;
 
 #include <libplanner/mrp-day.h>

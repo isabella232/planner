@@ -131,14 +131,6 @@ mrproject
 
 @Returns: 
 
-<!-- ##### FUNCTION mrp_time_from_tm ##### -->
-<para>
-
-</para>
-
-@tm: 
-@Returns: 
-
 <!-- ##### MACRO textdomain ##### -->
 <para>
 

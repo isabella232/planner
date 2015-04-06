@@ -22,6 +22,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-object
+ * @Title: MrpObject
+ */
+
 #include <config.h>
 #include <gobject/gvaluecollector.h>
 #include <string.h>
@@ -112,6 +117,11 @@ object_class_init (MrpObjectClass *klass)
 	klass->removed             = NULL;
 
 	/* Signals */
+
+    /**
+     * MrpObject::removed:
+     * @mrpobject: the object which received the signal.
+     */
 	signals[REMOVED] =
 		g_signal_new ("removed",
 			      G_TYPE_FROM_CLASS (klass),
@@ -122,6 +132,12 @@ object_class_init (MrpObjectClass *klass)
 			      G_TYPE_NONE,
 			      0);
 
+    /**
+     * MrpObject::prop-changed:
+     * @mrpobject: the object which received the signal.
+     * @arg1:
+     * @arg2:
+     */
 	signals[PROP_CHANGED] =
 		g_signal_new ("prop_changed",
 			      G_TYPE_FROM_CLASS (klass),

@@ -21,6 +21,17 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-relation
+ * @Short_description: represents a task predecessor relation in the project.
+ * @Title: MrpRelation
+ *
+ * A predecessor relation is used to affect the scheduling of a task
+ * relative another task.  A relation may have a lag time associated to it,
+ * so that a task can be scheduled to start after another task has
+ * finished, plus a lag time.
+ */
+
 #include <config.h>
 #include <string.h>
 #include <glib/gi18n.h>

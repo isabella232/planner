@@ -20,6 +20,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-assignment
+ * @Title: MrpAssignment
+ */
+
 #include <config.h>
 
 #include <glib/gi18n.h>

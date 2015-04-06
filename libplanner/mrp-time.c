@@ -21,6 +21,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-time
+ * @Title: mrptime
+ */
+
 #include <config.h>
 #include <glib-object.h>
 #include <stdio.h>

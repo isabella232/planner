@@ -21,6 +21,12 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-application
+ * @Short_description: the main project application object.
+ * @Title: MrpApplication
+ */
+
 #include <config.h>
 
 #include <stdlib.h>

@@ -32,7 +32,20 @@
 #define MRP_IS_RELATION_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MRP_TYPE_RELATION))
 #define MRP_RELATION_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_RELATION, MrpRelationClass))
 
+/**
+ * MrpRelation:
+ * @parent:
+ * @priv:
+ *
+ * Object representing a predecessor relation between two tasks.
+ */
 typedef struct _MrpRelation     MrpRelation;
+/**
+ * MrpRelationPriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpRelationPriv MrpRelationPriv;
 
 #include <libplanner/mrp-task.h>

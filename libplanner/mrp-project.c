@@ -22,6 +22,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-project
+ * @Title: MrpProject
+ */
+
 #include <config.h>
 #include <string.h>
 #include "mrp-error.h"
@@ -175,6 +180,10 @@ project_class_init (MrpProjectClass *klass)
 	object_class->set_property = project_set_property;
 	object_class->get_property = project_get_property;
 
+    /**
+     * MrpProject::loaded:
+     * @mrpproject: the object which received the signal.
+     */
 	signals[LOADED] = g_signal_new
 		("loaded",
 		 G_TYPE_FROM_CLASS (klass),
@@ -184,6 +193,11 @@ project_class_init (MrpProjectClass *klass)
 		 mrp_marshal_VOID__VOID,
 		 G_TYPE_NONE, 0);
 
+    /**
+     * MrpProject::resource-added:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[RESOURCE_ADDED] = g_signal_new
 		("resource_added",
 		 G_TYPE_FROM_CLASS (klass),
@@ -194,6 +208,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_RESOURCE);
 
+    /**
+     * MrpProject::resource-removed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[RESOURCE_REMOVED] = g_signal_new
 		("resource_removed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -204,6 +223,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_RESOURCE);
 
+    /**
+     * MrpProject::group-added:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[GROUP_ADDED] = g_signal_new
 		("group_added",
 		 G_TYPE_FROM_CLASS (klass),
@@ -214,6 +238,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_GROUP);
 
+    /**
+     * MrpProject::group-removed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[GROUP_REMOVED] = g_signal_new
 		("group_removed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -224,6 +253,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_GROUP);
 
+    /**
+     * MrpProject::default-group-changed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[DEFAULT_GROUP_CHANGED] = g_signal_new
 		("default_group_changed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -234,6 +268,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_GROUP);
 
+    /**
+     * MrpProject::task-inserted:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[TASK_INSERTED] = g_signal_new
 		("task_inserted",
 		 G_TYPE_FROM_CLASS (klass),
@@ -244,6 +283,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_TASK);
 
+    /**
+     * MrpProject::task-removed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[TASK_REMOVED] = g_signal_new
 		("task_removed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -254,6 +298,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_TASK);
 
+    /**
+     * MrpProject::task-moved:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[TASK_MOVED] = g_signal_new
 		("task_moved",
 		 G_TYPE_FROM_CLASS (klass),
@@ -264,6 +313,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_TASK);
 
+    /**
+     * MrpProject::needs-saving-changed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[NEEDS_SAVING_CHANGED] = g_signal_new
 		("needs_saving_changed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -274,6 +328,12 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, G_TYPE_BOOLEAN);
 
+    /**
+     * MrpProject::property-added:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     * @arg2:
+     */
 	signals[PROPERTY_ADDED] = g_signal_new
 		("property_added",
 		 G_TYPE_FROM_CLASS (klass),
@@ -284,6 +344,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 2, G_TYPE_LONG, G_TYPE_POINTER);
 
+    /**
+     * MrpProject::property-changed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[PROPERTY_CHANGED] = g_signal_new
 		("property_changed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -294,6 +359,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, G_TYPE_POINTER);
 
+    /**
+     * MrpProject::property-removed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[PROPERTY_REMOVED] = g_signal_new
 		("property_removed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -304,6 +374,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, G_TYPE_POINTER);
 
+    /**
+     * MrpProject::calendar-tree-changed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[CALENDAR_TREE_CHANGED] = g_signal_new
 		("calendar_tree_changed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -314,6 +389,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, MRP_TYPE_CALENDAR);
 
+    /**
+     * MrpProject::day-added:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[DAY_ADDED] = g_signal_new
 		("day_added",
 		 G_TYPE_FROM_CLASS (klass),
@@ -324,6 +404,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, G_TYPE_POINTER);
 
+    /**
+     * MrpProject::day-removed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[DAY_REMOVED] = g_signal_new
 		("day_removed",
 		 G_TYPE_FROM_CLASS (klass),
@@ -334,6 +419,11 @@ project_class_init (MrpProjectClass *klass)
 		 G_TYPE_NONE,
 		 1, G_TYPE_POINTER);
 
+    /**
+     * MrpProject::day-changed:
+     * @mrpproject: the object which received the signal.
+     * @arg1:
+     */
 	signals[DAY_CHANGED] = g_signal_new
 		("day_changed",
 		 G_TYPE_FROM_CLASS (klass),

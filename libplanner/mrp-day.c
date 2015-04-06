@@ -20,6 +20,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-day
+ * @Short_description: represents a day type in the project.
+ * @Title: mrpday
+ *
+ * A day is a specific type of day, such as working day or non-working
+ * day. Other examples might be custom types like half day, or a holiday.
+ */
+
 #include "mrp-private.h"
 #include <glib/gi18n.h>
 #include "mrp-day.h"

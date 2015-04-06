@@ -22,6 +22,12 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-resource
+ * @Short_description: represents a resource in the project.
+ * @Title: MrpResource
+ */
+
 #include <config.h>
 #include <string.h>
 #include "mrp-private.h"
@@ -207,6 +213,12 @@ resource_class_init (MrpResourceClass *klass)
                                                              G_PARAM_READWRITE));
 
 	/* Signals */
+
+    /**
+     * MrpResource::assignment-added:
+     * @mrpresource: the object which received the signal.
+     * @arg1:
+     */
 	signals[ASSIGNMENT_ADDED] =
 		g_signal_new ("assignment_added",
 			      G_TYPE_FROM_CLASS (klass),
@@ -217,6 +229,11 @@ resource_class_init (MrpResourceClass *klass)
 			      G_TYPE_NONE,
 			      1, MRP_TYPE_ASSIGNMENT);
 
+    /**
+     * MrpResource::assignment-removed:
+     * @mrpresource: the object which received the signal.
+     * @arg1:
+     */
 	signals[ASSIGNMENT_REMOVED] =
 		g_signal_new ("assignment_removed",
 			      G_TYPE_FROM_CLASS (klass),

@@ -33,8 +33,19 @@
 #define MRP_IS_OBJECT_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MRP_TYPE_OBJECT))
 #define MRP_OBJECT_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_OBJECT, MrpObjectClass))
 
+/**
+ * MrpObject:
+ *
+ * The base class for objects in libmrproject.
+ */
 typedef struct _MrpObject      MrpObject;
 typedef struct _MrpObjectClass MrpObjectClass;
+/**
+ * MrpObjectPriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpObjectPriv  MrpObjectPriv;
 
 struct _MrpObject {

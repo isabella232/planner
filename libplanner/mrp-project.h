@@ -37,12 +37,35 @@
 #define MRP_IS_PROJECT_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MRP_TYPE_PROJECT))
 #define MRP_PROJECT_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_PROJECT, MrpProjectClass))
 
+/**
+ * MrpProject:
+ *
+ * Object representing a project.
+ */
 typedef struct _MrpProject     MrpProject;
+/**
+ * MrpProjectPriv:
+ *
+ * A private struct for internal use only.  The definition of this
+ * structure is not publically available.
+ */
 typedef struct _MrpProjectPriv MrpProjectPriv;
 
 #include <libplanner/mrp-resource.h>
 #include <libplanner/mrp-calendar.h>
 
+/**
+ * MrpTaskTraverseFunc:
+ * @Param1:
+ * @Param2:
+ *
+ * A function to use with mrp_project_task_traverse(). @task is the
+ * currently traversed task, and @data is the user data passed to the
+ * mrp_project_task_traverse(). The traversal can be stopped by returning
+ * %TRUE.
+ *
+ * Returns: %TRUE if the traversal is to be stopped.
+ */
 typedef gboolean (*MrpTaskTraverseFunc) (MrpTask*, gpointer);
 
 struct _MrpProject {
