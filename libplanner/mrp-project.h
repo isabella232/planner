@@ -56,17 +56,17 @@ typedef struct _MrpProjectPriv MrpProjectPriv;
 
 /**
  * MrpTaskTraverseFunc:
- * @Param1:
- * @Param2:
+ * @task: an #MrpTask
+ * @user_data: user data
  *
  * A function to use with mrp_project_task_traverse(). @task is the
- * currently traversed task, and @data is the user data passed to the
+ * currently traversed task, and @user_data is the user data passed to the
  * mrp_project_task_traverse(). The traversal can be stopped by returning
  * %TRUE.
  *
  * Returns: %TRUE if the traversal is to be stopped.
  */
-typedef gboolean (*MrpTaskTraverseFunc) (MrpTask*, gpointer);
+typedef gboolean (*MrpTaskTraverseFunc) (MrpTask* task, gpointer user_data);
 
 struct _MrpProject {
 	MrpObject       parent;

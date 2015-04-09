@@ -1351,10 +1351,10 @@ stolen_g_date_get_iso8601_week_of_year (const GDate *d)
 }
 
 gint
-mrp_time2_get_week_number (MrpTime *t, gint *y)
+mrp_time2_get_week_number (MrpTime *t, gint *year)
 {
 	gint week;
-	gint year;
+	gint y;
 
 	g_return_val_if_fail (t != NULL, 0);
 
@@ -1363,25 +1363,25 @@ mrp_time2_get_week_number (MrpTime *t, gint *y)
 	/* Calculate the year this week belongs to as it can be different than
 	 * the year of the date (e.g. December 31 2002 is in week 1 of 2003).
 	 */
-	if(y != NULL) {
-		year = g_date_get_year (&t->date);
+	if(year != NULL) {
+		y = g_date_get_year (&t->date);
 
 		switch(g_date_get_month (&t->date)) {
 		case G_DATE_JANUARY:
 			if(week > 50) {
-				year--;
+				y--;
 			}
 			break;
 		case G_DATE_DECEMBER:
 			if(week == 1) {
-				year++;
+				y++;
 			}
 			break;
 		default:
 			break;
 		}
 
-		*y = year;
+		*year = y;
 	}
 	return week;
 }

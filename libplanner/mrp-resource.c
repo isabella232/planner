@@ -693,15 +693,15 @@ mrp_resource_get_short_name (MrpResource *resource)
 /**
  * mrp_resource_set_short_name:
  * @resource: an #MrpResource
- * @name: new short name of @resource
+ * @short_name: new short name of @resource
  *
  * Sets the short name of @resource.
  **/
-void mrp_resource_set_short_name (MrpResource *resource, const gchar *name)
+void mrp_resource_set_short_name (MrpResource *resource, const gchar *short_name)
 {
 	g_return_if_fail (MRP_IS_RESOURCE (resource));
 
-	mrp_object_set (MRP_OBJECT (resource), "short_name", name, NULL);
+	mrp_object_set (MRP_OBJECT (resource), "short_name", short_name, NULL);
 }
 
 /**

@@ -1073,7 +1073,7 @@ parser_build_xml_doc (MrpStorageMrproject  *module,
 
 gboolean
 mrp_parser_save (MrpStorageMrproject  *module,
-		 const gchar          *filename,
+		 const gchar          *uri,
 		 gboolean              force,
 		 GError              **error)
 {
@@ -1083,12 +1083,12 @@ mrp_parser_save (MrpStorageMrproject  *module,
 	xmlDocPtr  doc;
 
 	g_return_val_if_fail (MRP_IS_STORAGE_MRPROJECT (module), FALSE);
-	g_return_val_if_fail (filename != NULL && filename[0] != 0, FALSE);
+	g_return_val_if_fail (uri != NULL && uri[0] != 0, FALSE);
 
-	if (!strstr (filename, ".mrproject") && !strstr (filename, ".planner")) {
-		real_filename = g_strconcat (filename, ".planner", NULL);
+	if (!strstr (uri, ".mrproject") && !strstr (uri, ".planner")) {
+		real_filename = g_strconcat (uri, ".planner", NULL);
 	} else {
-		real_filename = g_strdup (filename);
+		real_filename = g_strdup (uri);
 	}
 
 	file_exist = g_file_test (
