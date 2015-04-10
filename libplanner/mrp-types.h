@@ -42,29 +42,29 @@
  * The type of relation.
  */
 typedef enum {
-	MRP_RELATION_NONE = 0, /* unset */
-	MRP_RELATION_FS,       /* finish-to-start */
-	MRP_RELATION_FF,       /* finish-to-finish */
-	MRP_RELATION_SS,       /* start-to-start */
-	MRP_RELATION_SF        /* start-to-finish */
+	MRP_RELATION_NONE = 0,
+	MRP_RELATION_FS,
+	MRP_RELATION_FF,
+	MRP_RELATION_SS,
+	MRP_RELATION_SF
 } MrpRelationType;
 
 /**
  * MrpConstraintType:
- * @MRP_CONSTRAINT_ASAP: as soon as possible
+ * @MRP_CONSTRAINT_ASAP: as soon as possible (default)
  * @MRP_CONSTRAINT_ALAP: as late as possible (unimplemented)
  * @MRP_CONSTRAINT_SNET: start no eariler than
  * @MRP_CONSTRAINT_FNLT: finish no later than (unimplemented)
  * @MRP_CONSTRAINT_MSO: must start on
  *
- * The type of constraint for the task. The default is %MRP_CONSTRAINT_ASAP.
+ * The type of constraint for the task. The default is #MRP_CONSTRAINT_ASAP.
  */
 typedef enum {
-	MRP_CONSTRAINT_ASAP = 0, /* as-soon-as-possible */
-	MRP_CONSTRAINT_ALAP,     /* as-late-as-possible */
-	MRP_CONSTRAINT_SNET,     /* start-no-earlier-than */
-	MRP_CONSTRAINT_FNLT,     /* finish-no-later-than */
-	MRP_CONSTRAINT_MSO,      /* must-start-on */
+	MRP_CONSTRAINT_ASAP = 0,
+	MRP_CONSTRAINT_ALAP,
+	MRP_CONSTRAINT_SNET,
+	MRP_CONSTRAINT_FNLT,
+	MRP_CONSTRAINT_MSO,
 } MrpConstraintType;
 
 struct _MrpConstraint {
@@ -72,11 +72,25 @@ struct _MrpConstraint {
 	mrptime           time;
 };
 
+/**
+ * MrpTaskType:
+ * @MRP_TASK_TYPE_NORMAL: normal
+ * @MRP_TASK_TYPE_MILESTONE: milestone
+ *
+ * Task types.
+ */
 typedef enum {
 	MRP_TASK_TYPE_NORMAL,
 	MRP_TASK_TYPE_MILESTONE
 } MrpTaskType;
 
+/**
+ * MrpTaskSched:
+ * @MRP_TASK_SCHED_FIXED_WORK: fixed work
+ * @MRP_TASK_SCHED_FIXED_DURATION: fixed duration
+ *
+ * Task scheduling types.
+ */
 typedef enum {
 	MRP_TASK_SCHED_FIXED_WORK,
 	MRP_TASK_SCHED_FIXED_DURATION

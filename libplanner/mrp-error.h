@@ -34,18 +34,18 @@
 
 /**
  * MrpError:
- * @MRP_ERROR_TASK_RELATION_FAILED:
- * @MRP_ERROR_TASK_MOVE_FAILED:
- * @MRP_ERROR_LOAD_FILE_DONT_EXIST:
- * @MRP_ERROR_LOAD_FILE_INVALID:
- * @MRP_ERROR_SAVE_FILE_EXIST:
- * @MRP_ERROR_SAVE_FILE_CHANGED:
- * @MRP_ERROR_EXPORT_UNSUPPORTED:
- * @MRP_ERROR_EXPORT_FAILED:
- * @MRP_ERROR_NO_FILE_MODULE:
- * @MRP_ERROR_SAVE_WRITE_FAILED:
- * @MRP_ERROR_INVALID_URI:
- * @MRP_ERROR_FAILED:
+ * @MRP_ERROR_TASK_RELATION_FAILED: task relation failed.
+ * @MRP_ERROR_TASK_MOVE_FAILED: task move failed.
+ * @MRP_ERROR_LOAD_FILE_DONT_EXIST: load file doesn't exist.
+ * @MRP_ERROR_LOAD_FILE_INVALID: load file is invalid.
+ * @MRP_ERROR_SAVE_FILE_EXIST: save file exists.
+ * @MRP_ERROR_SAVE_FILE_CHANGED: save file changed.
+ * @MRP_ERROR_EXPORT_UNSUPPORTED: export unsupported.
+ * @MRP_ERROR_EXPORT_FAILED: export failed.
+ * @MRP_ERROR_NO_FILE_MODULE: no file module.
+ * @MRP_ERROR_SAVE_WRITE_FAILED: save write failed.
+ * @MRP_ERROR_INVALID_URI: invalid URI.
+ * @MRP_ERROR_FAILED: General error (should avoid using this).
  *
  * Error codes returned by libmrproject functions.
  */
@@ -64,7 +64,6 @@ typedef enum {
 
 	MRP_ERROR_INVALID_URI,
 
-	/* General error (should avoid using this). */
         MRP_ERROR_FAILED
 } MrpError;
 

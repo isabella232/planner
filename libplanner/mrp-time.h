@@ -55,6 +55,21 @@ typedef long mrptime;
  */
 #define MRP_TIME_MAX 2147483647
 
+/**
+ * MrpTimeUnit:
+ * @MRP_TIME_UNIT_NONE: none.
+ * @MRP_TIME_UNIT_YEAR: year.
+ * @MRP_TIME_UNIT_HALFYEAR: half year.
+ * @MRP_TIME_UNIT_QUARTER: quarter.
+ * @MRP_TIME_UNIT_MONTH: month.
+ * @MRP_TIME_UNIT_WEEK: week.
+ * @MRP_TIME_UNIT_DAY: day.
+ * @MRP_TIME_UNIT_HALFDAY: half day.
+ * @MRP_TIME_UNIT_TWO_HOURS: two hours.
+ * @MRP_TIME_UNIT_HOUR: hour.
+ *
+ * Time granularity meaningful to humans.
+ */
 typedef enum {
 	MRP_TIME_UNIT_NONE,
 	MRP_TIME_UNIT_YEAR,
