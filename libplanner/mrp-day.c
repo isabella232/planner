@@ -283,7 +283,7 @@ mrp_day_get_work (void)
  *
  * Fetches the builtin day type nonwork.
  *
- * Return value: the builtin day type nowork
+ * Return value: the builtin day type nonwork
  **/
 MrpDay *
 mrp_day_get_nonwork (void)

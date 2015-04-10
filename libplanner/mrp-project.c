@@ -29,7 +29,7 @@
  * @include: libplanner/mrp-project.h
  *
  * A project has got some properties.
- * One can add his own properties.
+ * One can add custom properties.
  *
  * A project maintains a list of #MrpGroup and can designates one as the
  * default. If you specify a default group, every new #MrpResource that you add
@@ -2067,7 +2067,7 @@ mrp_project_reschedule (MrpProject *project)
  * mrp_project_calculate_summary_duration:
  * @project: an #MrpProject
  * @task: an #MrpTask
- * @start: a start time, or if %-1, the task start time is to be used
+ * @start: a start time, or if -1, the task start time is to be used
  * @finish: a finish time
  *
  * Calculates the time needed to achieve the given start and finish time,
@@ -2096,7 +2096,7 @@ mrp_project_calculate_summary_duration (MrpProject *project,
  * mrp_project_calculate_task_work:
  * @project: an #MrpProject
  * @task: an #MrpTask
- * @start: a start time, or if %-1, the task start time is to be used
+ * @start: a start time, or if -1, the task start time is to be used
  * @finish: a finish time
  *
  * Calculates the work needed to achieve the given start and finish time, with
@@ -2286,7 +2286,7 @@ mrp_project_add_property (MrpProject  *project,
 /**
  * mrp_project_remove_property:
  * @project: an #MrpProject
- * @object_type: a #GType specifing object type to remove property from
+ * @object_type: a #GType specifying object type to remove property from
  * @name: the name of the property
  *
  * Removes the property corresponding to @object_type and @name from @project.
@@ -2324,7 +2324,7 @@ mrp_project_remove_property (MrpProject  *project,
 /**
  * mrp_project_has_property:
  * @project: an #MrpProperty
- * @owner_type: a #GType specifing object type look for property on
+ * @owner_type: a #GType specifying object type look for property on
  * @name: the name of the property
  *
  * Checks if @project has a property named @name applying to object of type

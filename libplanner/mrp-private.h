@@ -100,7 +100,7 @@ MrpTaskType       imrp_task_get_type                 (MrpTask         *task);
 MrpTaskSched      imrp_task_get_sched                (MrpTask         *task);
 
 
-/* MrpTime funcitons. */
+/* MrpTime functions. */
 void            imrp_time_init                     (void);
 
 /* MrpStorageModule functions. */

@@ -53,7 +53,7 @@ typedef enum {
  * MrpConstraintType:
  * @MRP_CONSTRAINT_ASAP: as soon as possible (default)
  * @MRP_CONSTRAINT_ALAP: as late as possible (unimplemented)
- * @MRP_CONSTRAINT_SNET: start no eariler than
+ * @MRP_CONSTRAINT_SNET: start no earlier than
  * @MRP_CONSTRAINT_FNLT: finish no later than (unimplemented)
  * @MRP_CONSTRAINT_MSO: must start on
  *
@@ -106,7 +106,7 @@ typedef struct _MrpTask       MrpTask;
 /**
  * MrpResource:
  *
- * Object representing a task in the project.
+ * Object representing a resource in the project.
  */
 typedef struct _MrpResource   MrpResource;
 /**

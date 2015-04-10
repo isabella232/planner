@@ -286,7 +286,7 @@ imrp_application_id_set_data (gpointer data,
  * @object_id: an object id
  *
  * Get the object reference in the list of MrpObjects
- * using the object_id as locator
+ * using the object_id as locator.
  *
  * Return value: a pointer to the data
  **/

@@ -442,7 +442,7 @@ mrp_time_day_of_week (mrptime t)
  *
  * Retrieves the week number of the specified time.
  *
- * Return value: ISO standard week number.
+ * Return value: ISO 8601 week number.
  **/
 gint
 mrp_time_week_number (mrptime t)
@@ -463,7 +463,7 @@ mrp_time_week_number (mrptime t)
  *
  * Convenience function for creating a #GParamSpec carrying an #mrptime value.
  *
- * Return value: Newly created #GparamSpec.
+ * Return value: Newly created #GParamSpec.
  **/
 GParamSpec *
 mrp_param_spec_time (const gchar *name,
@@ -924,30 +924,30 @@ time_format_helper (const gchar *format,
  * @format: format string
  * @t: an #mrptime value
  *
- * Formats a string with time values. The following format codes are allowed:
- * <informalexample><programlisting>
- * %a     The abbreviated weekday name (Mon, Tue, ...)
- * %A     The full weekday name (Monday, Tuesday, ...)
- * %b     The abbreviated month name (Jan, Feb, ...)
- * %B     The full month name (January, February, ...)
- * %d     The day of the month (01 - 31).
- * %e     The day of the month (1 - 31).
- * %H     The hour using a 24-hour clock (00 - 23).
- * %I     The hour using a 12-hour clock (01 - 12).
- * %j     The day of the year (001 - 366).
- * %k     The hour using a 24-hour clock (0 to 23).
- * %l     The hour using a 12-hour clock (1 - 12).
- * %m     The month number (01 to 12).
- * %M     The minute (00 - 59).
- * %p     Either 'AM' or 'PM' according  to the given time value.
- * %P     Like %p but in lowercase.
- * %R     The time in 24 hour notation (%H:%M).
- * %S     The second (00 - 61).
- * %U     The week number, (1 - 53), starting with the first Sunday as the first day of week 1.
- * %W     The week number, (1 - 53), starting with the first Monday as the first day of week 1.
- * %y     The year without a century (range 00 to 99).
- * %Y     The year including the century.
- * </programlisting></informalexample>
+ * Formats a string with time values.
+ *
+ * The following format codes are allowed:
+ * - \%a: the abbreviated weekday name (Mon, Tue, ...)
+ * - \%A: the full weekday name (Monday, Tuesday, ...)
+ * - \%b: the abbreviated month name (Jan, Feb, ...)
+ * - \%B: the full month name (January, February, ...)
+ * - \%d: the day of the month (01 - 31).
+ * - \%e: the day of the month (1 - 31).
+ * - \%H: the hour using a 24-hour clock (00 - 23).
+ * - \%I: the hour using a 12-hour clock (01 - 12).
+ * - \%j: the day of the year (001 - 366).
+ * - \%k: the hour using a 24-hour clock (0 to 23).
+ * - \%l: the hour using a 12-hour clock (1 - 12).
+ * - \%m: the month number (01 to 12).
+ * - \%M: the minute (00 - 59).
+ * - \%p: either 'AM' or 'PM' according  to the given time value.
+ * - \%P: like \%p but in lowercase.
+ * - \%R: the time in 24 hour notation (\%H:\%M).
+ * - \%S: the second (00 - 61).
+ * - \%U: the week number, (1 - 53), starting with the first Sunday as the first day of week 1.
+ * - \%W: the week number, (1 - 53), starting with the first Monday as the first day of week 1.
+ * - \%y: the year without a century (range 00 to 99).
+ * - \%Y: the year including the century.
  *
  * Return value: Newly created string that needs to be freed.
  **/

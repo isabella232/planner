@@ -674,7 +674,7 @@ mrp_resource_new (void)
  * mrp_resource_get_name:
  * @resource: an #MrpResource
  *
- * Retrives the name of @resource.
+ * Retrieves the name of @resource.
  *
  * Return value: the name
  **/
@@ -704,7 +704,7 @@ void mrp_resource_set_name (MrpResource *resource, const gchar *name)
  * mrp_resource_get_short_name:
  * @resource: an #MrpResource
  *
- * Retrives the short_name of @resource.
+ * Retrieves the short_name of @resource.
  *
  * Return value: the short name
  **/

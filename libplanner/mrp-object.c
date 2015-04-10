@@ -371,7 +371,7 @@ object_property_removed_cb (MrpProject  *project,
  * mrp_object_removed:
  * @object: an #MrpObject
  *
- * Emits the signal %removed. This means that any references to the object
+ * Emits the #MrpObject::removed signal. This means that any references to the object
  * should be dropped, since the object is removed from the project.
  **/
 void
@@ -386,7 +386,7 @@ mrp_object_removed (MrpObject *object)
  * mrp_object_changed:
  * @object: an #MrpObject
  *
- * Emits the signal needs-saving on the project that this object belongs to,
+ * Emits the #MrpProject::needs-saving-changed on the project @object belongs to,
  * indicating that the project has unsaved changes.
  **/
 void
@@ -537,7 +537,7 @@ mrp_object_set_valist (MrpObject   *object,
 			g_free (error);
 
 			/* we purposely leak the value here, it might not be
-			 * in a sane state if an error condition occoured
+			 * in a sane state if an error condition occurred
 			 */
 			break;
 		}
@@ -660,7 +660,7 @@ mrp_object_get_properties (MrpObject *object)
  *
  * Retrieves the unique object id in the application
  *
- * Return value: 0 if fails, object id if everything is ok.
+ * Return value: 0 if fails, object id if everything is OK.
  **/
 guint
 mrp_object_get_id (MrpObject *object)
@@ -683,7 +683,7 @@ mrp_object_get_id (MrpObject *object)
  * Change the unique object id in the application.
  * This function must be called only from Undo/Redo operations.
  *
- * Return value: FALSE if fails, TRUE is everything is ok.
+ * Return value: FALSE if fails, TRUE is everything is OK.
  **/
 gboolean
 mrp_object_set_id (MrpObject *object,

@@ -28,7 +28,7 @@
  * @include: libplanner/mrp-property.h
  *
  * MrpProperty is a typedef to #GParamSpec. It is used to add properties to
- * projects, resources and tasks in run time, for example by the user of a
+ * projects, resources and tasks at run time, for example by the user of a
  * GUI application, or plugins that add functionality.
  */
 
@@ -364,7 +364,7 @@ mrp_property_unref (MrpProperty *property)
  * mrp_property_type_as_string:
  * @type: an #MrpPropertyType
  *
- * Transform a #MrpPropertyTYpe into a human readable string.
+ * Transform a #MrpPropertyType into a human readable string.
  *
  * Return value: a string representation of @type
  **/

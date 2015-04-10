@@ -512,7 +512,7 @@ mrp_calendar_derive (const gchar *name, MrpCalendar *parent)
  * @new_parent: the new parent
  * @child: an #MrpCalendar
  *
- * Changes the parent of @calendar so that it inherits @new_parent, instead of
+ * Changes the parent of @child so that it inherits @new_parent, instead of
  * its old parent.
  *
  **/
@@ -919,7 +919,7 @@ mrp_calendar_get_parent (MrpCalendar *calendar)
  * mrp_calendar_get_children:
  * @calendar: an #MrpCalendar
  *
- * Retreives a list of the children, i.e. the calenderas that are immediately
+ * Retrieves a list of the children, i.e. the calendars that are immediately
  * derived from @calendar.
  *
  * Return value: List of @calendar's children.
@@ -938,7 +938,7 @@ mrp_calendar_get_children (MrpCalendar *calendar)
  * @date: an #mrptime
  * @check_ancestors: specifies if the whole calendar hierarchy should be checked
  *
- * Retrieves the day type for the given date and calender. If @check_ancestors
+ * Retrieves the day type for the given date and calendar. If @check_ancestors
  * is %TRUE, the parent and grandparent, and so on, is searched if @calendar
  * does not have an overridden day type for the specified date.
  *
@@ -1118,7 +1118,7 @@ foreach_day_interval_add_to_list (MrpDay  *day,
  * @calendar: an #MrpCalendar
  *
  * Retrieves the days that are overridden in this calendar, and the intervals
- * that they are overriden with. This is mainly used when saving calendar data.
+ * that they are overridden with. This is mainly used when saving calendar data.
  *
  * Return value: A list of #MrpDayWithIntervals structs, that must be freed
  * (both the list and the data).

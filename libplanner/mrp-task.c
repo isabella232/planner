@@ -120,7 +120,7 @@ struct _MrpTaskPriv {
 	/* Percent complete, 0-100. */
 	gshort            percent_complete;
 
-	/* Arbitary range of 0,1..9999. A hint for any (3rd party) resource leveller */
+	/* Arbitrary range of 0,1..9999. A hint for any (3rd party) resource leveller */
 	gint              priority;
 
 	gchar            *name;
@@ -991,7 +991,7 @@ mrp_task_new (void)
  * mrp_task_get_name:
  * @task: an #MrpTask
  *
- * Retrives the name of @task.
+ * Retrieves the name of @task.
  *
  * Return value: the name
  **/
@@ -1005,7 +1005,7 @@ mrp_task_get_name (MrpTask *task)
 
 /**
  * mrp_task_set_name:
- * @task: an #MrpResource
+ * @task: an #MrpTask
  * @name: new name of @task
  *
  * Sets the name of @task.
@@ -1086,8 +1086,8 @@ task_get_successor_relation (MrpTask *task,
  * @task_a: an #MrpTask
  * @task_b: an #MrpTask
  *
- * Checks if @a and @b has a relation, i.e. if a is a predecessor or successor
- * of b.
+ * Checks if @task_a and @task_b has a relation, i.e. if @task_a is a
+ * predecessor or successor of @task_b.
  *
  * Return value: %TRUE if @a and @b has a relation
  **/
@@ -1843,7 +1843,7 @@ mrp_task_compare (gconstpointer a, gconstpointer b)
  * mrp_task_reset_constraint:
  * @task: an #MrpTask
  *
- * Sets the contraint type to %MRP_CONTRAINT_ASAP and notifies listeners.
+ * Sets the constraint type to #MRP_CONSTRAINT_ASAP and notifies listeners.
  **/
 void
 mrp_task_reset_constraint (MrpTask *task)

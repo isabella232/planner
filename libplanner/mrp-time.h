@@ -51,7 +51,7 @@ typedef long mrptime;
 /**
  * MRP_TIME_MAX:
  *
- * Represents the maximium value for #mrptime.
+ * Represents the maximum value for #mrptime.
  */
 #define MRP_TIME_MAX 2147483647
 

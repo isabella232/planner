@@ -306,7 +306,7 @@ mrp_group_new (void)
  * mrp_group_get_name:
  * @group: an #MrpGroup
  *
- * Retrives the name of @group.
+ * Retrieves the name of @group.
  *
  * Return value: the name
  **/
