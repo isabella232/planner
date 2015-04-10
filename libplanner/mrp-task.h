@@ -68,10 +68,21 @@ typedef struct {
 	gint     res_n;
 } MrpUnitsInterval;
 
+/**
+ * UNIT_IVAL_GET_TIME:
+ * @R: an interval
+ *
+ * Get start or end time of an interval.
+ */
 #define UNIT_IVAL_GET_TIME(R) ((R->is_start?R->start:R->end))
 
 #ifdef WITH_SIMPLE_PRIORITY_SCHEDULING
-/* Value of the magic priority of a dominant task. */
+
+/**
+ * MRP_DOMINANT_PRIORITY:
+ *
+ * Value of the magic priority of a dominant task.
+ */
 #define MRP_DOMINANT_PRIORITY           9999
 #endif
 
