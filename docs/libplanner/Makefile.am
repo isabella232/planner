@@ -3,19 +3,23 @@
 # The name of the module.
 DOC_MODULE=libplanner
 
-# The top-level SGML file.
-DOC_MAIN_SGML_FILE=libplanner-docs.xml
+# The top-level XML file (SGML in the past).
+DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.xml
 
-# The directory containing the source code. Relative to $(srcdir)
-DOC_SOURCE_DIR=../../libplanner
+# Directories containing the source code.
+# gtk-doc will search all .c and .h files beneath these paths
+# for inline comments documenting functions and macros.
+# e.g. DOC_SOURCE_DIR=$(top_srcdir)/gtk $(top_srcdir)/gdk
+DOC_SOURCE_DIR=$(top_srcdir)/libplanner
 
-# Extra options to pass to gtkdoc-scangobj
+# Extra options to pass to gtkdoc-scangobj. Not normally needed.
 SCANGOBJ_OPTIONS=
 
 # Extra options to supply to gtkdoc-scan
-#SCAN_OPTIONS=--deprecated-guards="GTK_ENABLE_BROKEN|GTK_DISABLE_DEPRECATED" 
+#SCAN_OPTIONS=--deprecated-guards="GTK_ENABLE_BROKEN|GTK_DISABLE_DEPRECATED"
 
-# Extra options to supply to gtkdoc-mkdb
+# Extra options to supply to gtkdoc-mkdb.
+# e.g. MKDB_OPTIONS=--xml-mode --output-format=xml
 MKDB_OPTIONS=--xml-mode --output-format=xml
 
 # Extra options to supply to gtkdoc-fixref
@@ -25,20 +29,26 @@ MKDB_OPTIONS=--xml-mode --output-format=xml
 HFILE_GLOB=$(top_srcdir)/libplanner/*.h
 CFILE_GLOB=$(top_srcdir)/libplanner/*.c
 
-# Header files to ignore when scanning
-IGNORE_HFILES=  mrp-intl.h 			\
-		mrp-marshal.h			\
-		mrp-task-manager.h		\
-		mrp-storage-module.h		\
-		mrp-storage-module-factory.h	\
-		mrp-private.h			\
-		mrp-file-module.h
+# Header files or dirs to ignore when scanning. Use base file/dir names
+# e.g. IGNORE_HFILES=gtkdebug.h gtkintl.h private_code
+IGNORE_HFILES = \
+  mrp-file-module.h \
+  mrp-marshal.h \
+  mrp-old-xml.h \
+  mrp-parser.h \
+  mrp-paths.h  \
+  mrp-private.h \
+  mrp-sql.h \
+  mrp-storage-module-factory.h \
+  mrp-storage-module.h  \
+  mrp-storage-module-xml.h  \
+  mrp-storage-mrproject.h \
+  mrp-storage-sql.h \
+  mrp-task-manager.h
 
 # Extra SGML files that are included by $(DOC_MAIN_SGML_FILE)
-content_files = 		
-
-# Other files to distribute
-extra_files =
+# e.g. content_files=running.sgml building.sgml changes-2.0.sgml
+content_files=
 
 # CFLAGS and LDFLAGS for compiling scan program. Only needed
 # if $(DOC_MODULE).types is non-empty.
@@ -51,9 +61,14 @@ GTKDOC_LIBS =						\
 	$(LIBPLANNER_LIBS)				\
 	$(top_builddir)/libplanner/libplanner-1.la
 
-
-GTKDOC_CC=$(LIBTOOL) --mode=compile $(CC)
-GTKDOC_LD=$(LIBTOOL) --mode=link $(CC)
-
-
+# This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make
+
+# Comment this out if you want 'make check' to test you doc status
+# and run some sanity checks
+if ENABLE_GTK_DOC
+TESTS_ENVIRONMENT = \
+  DOC_MODULE=$(DOC_MODULE) DOC_MAIN_SGML_FILE=$(DOC_MAIN_SGML_FILE) \
+  SRCDIR=$(abs_srcdir) BUILDDIR=$(abs_builddir)
+TESTS = $(GTKDOC_CHECK)
+endif
