@@ -84,7 +84,7 @@ static struct tm *mrp_time_to_tm   (mrptime    t);
  *
  * Composes an #mrptime value from the separate components.
  *
- * Return value: An #mrptime value.
+ * Return value: an #mrptime value.
  **/
 mrptime
 mrp_time_compose (gint year,
@@ -157,7 +157,7 @@ mrp_time_decompose (mrptime  t,
 
 /**
  * mrp_time_debug_print:
- * @t: an  #mrptime
+ * @t: an #mrptime
  *
  * Prints the time on stdout, for debugging purposes.
  **/
@@ -374,6 +374,14 @@ mrp_time_align_day (mrptime t)
 	return mrp_time2_get_epoch (&t2);
 }
 
+/**
+ * mrp_time_align_prev:
+ * @t: an #mrptime value
+ * @unit: an #MrpTimeUnit
+ * @Returns: Aligned value.
+ *
+ * Align @t to the previous @unit.
+ */
 mrptime
 mrp_time_align_prev (mrptime t, MrpTimeUnit unit)
 {
@@ -385,6 +393,14 @@ mrp_time_align_prev (mrptime t, MrpTimeUnit unit)
 	return mrp_time2_get_epoch (&t2);
 }
 
+/**
+ * mrp_time_align_next:
+ * @t: an #mrptime value
+ * @unit: an #MrpTimeUnit
+ * @Returns: Aligned value.
+ *
+ * Align @t to the next @unit.
+ */
 mrptime
 mrp_time_align_next (mrptime t, MrpTimeUnit unit)
 {
@@ -985,6 +1001,12 @@ mrp_time_format_locale (mrptime t)
 #define SECS_IN_HOUR (60*60)
 #define SECS_IN_DAY  (60*60*24)
 
+/**
+ * mrp_time2_new:
+ * @Returns: A newly created #MrpTime.
+ *
+ * #MrpTime constructor.
+ */
 MrpTime *
 mrp_time2_new (void)
 {
@@ -997,12 +1019,27 @@ mrp_time2_new (void)
 	return t;
 }
 
+/**
+ * mrp_time2_free:
+ * @t: an #MrpTime.
+ *
+ * #MrpTime destructor.
+ */
 void
 mrp_time2_free (MrpTime *t)
 {
 	g_free (t);
 }
 
+/**
+ * mrp_time2_set_date:
+ * @t: an #MrpTime
+ * @year: year
+ * @month: month
+ * @day: day
+ *
+ * Set @t date.
+ */
 void
 mrp_time2_set_date (MrpTime *t,
 		    gint     year,
@@ -1017,6 +1054,15 @@ mrp_time2_set_date (MrpTime *t,
 	g_date_set_dmy (&t->date, day, month, year);
 }
 
+/**
+ * mrp_time2_set_time:
+ * @t: an #MrpTime
+ * @hour: hour
+ * @min: min
+ * @sec: sec
+ *
+ * Set @t time.
+ */
 void
 mrp_time2_set_time (MrpTime *t,
 		    gint     hour,
@@ -1033,6 +1079,15 @@ mrp_time2_set_time (MrpTime *t,
 	t->sec = sec;
 }
 
+/**
+ * mrp_time2_get_date:
+ * @t: an #MrpTime
+ * @year: year
+ * @month: month
+ * @day: day
+ *
+ * Get @t time.
+ */
 void
 mrp_time2_get_date (MrpTime *t,
 		    gint    *year,
@@ -1049,6 +1104,15 @@ mrp_time2_get_date (MrpTime *t,
 	*day = g_date_get_day (&t->date);
 }
 
+/**
+ * mrp_time2_get_time:
+ * @t: an #MrpTime
+ * @hour: hour
+ * @min: min
+ * @sec: sec
+ *
+ * Get @t time.
+ */
 void
 mrp_time2_get_time (MrpTime *t,
 		    gint    *hour,
@@ -1065,6 +1129,13 @@ mrp_time2_get_time (MrpTime *t,
 	*sec = t->sec;
 }
 
+/**
+ * mrp_time2_add_years:
+ * @t: an #MrpTime
+ * @years: years
+ *
+ * Add @years to @t.
+ */
 void
 mrp_time2_add_years (MrpTime *t, gint years)
 {
@@ -1074,6 +1145,13 @@ mrp_time2_add_years (MrpTime *t, gint years)
 	g_date_add_years (&t->date, years);
 }
 
+/**
+ * mrp_time2_add_months:
+ * @t: an #MrpTime
+ * @months: months
+ *
+ * Add @months to @t.
+ */
 void
 mrp_time2_add_months (MrpTime *t, gint months)
 {
@@ -1083,6 +1161,13 @@ mrp_time2_add_months (MrpTime *t, gint months)
 	g_date_add_months (&t->date, months);
 }
 
+/**
+ * mrp_time2_add_days:
+ * @t: an #MrpTime
+ * @days: days
+ *
+ * Add @days to @t.
+ */
 void
 mrp_time2_add_days (MrpTime *t, gint days)
 {
@@ -1092,6 +1177,13 @@ mrp_time2_add_days (MrpTime *t, gint days)
 	g_date_add_days (&t->date, days);
 }
 
+/**
+ * mrp_time2_add_seconds:
+ * @t: an #MrpTime
+ * @secs: seconds
+ *
+ * Add @secs to @t.
+ */
 void
 mrp_time2_add_seconds (MrpTime *t, gint64 secs)
 {
@@ -1116,6 +1208,13 @@ mrp_time2_add_seconds (MrpTime *t, gint64 secs)
 	t->sec = secs % SECS_IN_MIN;
 }
 
+/**
+ * mrp_time2_add_minutes:
+ * @t: an #MrpTime
+ * @mins: minutes
+ *
+ * Add @mins to @t.
+ */
 void
 mrp_time2_add_minutes (MrpTime *t, gint64 mins)
 {
@@ -1125,6 +1224,13 @@ mrp_time2_add_minutes (MrpTime *t, gint64 mins)
 	mrp_time2_add_seconds (t, mins * SECS_IN_MIN);
 }
 
+/**
+ * mrp_time2_add_hours:
+ * @t: an #MrpTime
+ * @hours: hours
+ *
+ * Add @hours to @t.
+ */
 void
 mrp_time2_add_hours (MrpTime *t, gint64 hours)
 {
@@ -1134,6 +1240,13 @@ mrp_time2_add_hours (MrpTime *t, gint64 hours)
 	mrp_time2_add_seconds (t, hours * SECS_IN_HOUR);
 }
 
+/**
+ * mrp_time2_subtract_seconds:
+ * @t: an #MrpTime
+ * @secs: seconds
+ *
+ * Subtract @secs from @t.
+ */
 void
 mrp_time2_subtract_seconds (MrpTime *t, gint64 secs)
 {
@@ -1156,6 +1269,13 @@ mrp_time2_subtract_seconds (MrpTime *t, gint64 secs)
 	t->sec = secs % SECS_IN_MIN;
 }
 
+/**
+ * mrp_time2_subtract_minutes:
+ * @t: an #MrpTime
+ * @mins: minutes
+ *
+ * Subtract @mins from @t.
+ */
 void
 mrp_time2_subtract_minutes (MrpTime *t, gint64 mins)
 {
@@ -1165,6 +1285,13 @@ mrp_time2_subtract_minutes (MrpTime *t, gint64 mins)
 	mrp_time2_subtract_seconds (t, mins * SECS_IN_MIN);
 }
 
+/**
+ * mrp_time2_subtract_hours:
+ * @t: an #MrpTime
+ * @hours: hours
+ *
+ * Subtract @hours from @t.
+ */
 void
 mrp_time2_subtract_hours (MrpTime *t, gint64 hours)
 {
@@ -1174,6 +1301,13 @@ mrp_time2_subtract_hours (MrpTime *t, gint64 hours)
 	mrp_time2_subtract_seconds (t, hours * SECS_IN_HOUR);
 }
 
+/**
+ * mrp_time2_subtract_days:
+ * @t: an #MrpTime
+ * @days: days
+ *
+ * Subtract @days from @t.
+ */
 void
 mrp_time2_subtract_days (MrpTime *t, gint days)
 {
@@ -1183,6 +1317,13 @@ mrp_time2_subtract_days (MrpTime *t, gint days)
 	g_date_subtract_days (&t->date, days);
 }
 
+/**
+ * mrp_time2_subtract_months:
+ * @t: an #MrpTime
+ * @months: months
+ *
+ * Subtract @months from @t.
+ */
 void
 mrp_time2_subtract_months (MrpTime *t, gint months)
 {
@@ -1192,6 +1333,13 @@ mrp_time2_subtract_months (MrpTime *t, gint months)
 	g_date_subtract_months (&t->date, months);
 }
 
+/**
+ * mrp_time2_subtract_years:
+ * @t: an #MrpTime
+ * @years: years
+ *
+ * Subtract @years from @t.
+ */
 void
 mrp_time2_subtract_years (MrpTime *t, gint years)
 {
@@ -1201,6 +1349,12 @@ mrp_time2_subtract_years (MrpTime *t, gint years)
 	g_date_subtract_years (&t->date, years);
 }
 
+/**
+ * mrp_time2_debug_print:
+ * @t: an #MrpTime
+ *
+ * Prints the time on stdout, for debugging purposes.
+ */
 void
 mrp_time2_debug_print (MrpTime *t)
 {
@@ -1215,6 +1369,19 @@ mrp_time2_debug_print (MrpTime *t)
 		 t->sec);
 }
 
+/**
+ * mrp_time2_set_from_string:
+ * @t: an #MrpTime
+ * @str: a string
+ * @Returns: #TRUE on success, #FALSE on failure
+ *
+ * Set @t according to @str.
+ *
+ * Three formats are recognized `"yyyymmddTHHMMSS"`, `"yyyymmddTHHMMSSZ"`, and
+ * `"yyyymmdd"`. The last is a date, the time part of @t is not modified.
+ * `mrp_time2_set_from_string(t, "20041231")` is not equivalent to
+ * `mrp_time2_set_from_string(t, "20041231T000000Z")`.
+ */
 gboolean
 mrp_time2_set_from_string (MrpTime      *t,
 			   const gchar  *str)
@@ -1273,6 +1440,13 @@ mrp_time2_set_from_string (MrpTime      *t,
 	return TRUE;
 }
 
+/**
+ * mrp_time2_to_string:
+ * @t: an #MrpTime
+ * @Returns: a string
+ *
+ * Build an ISO 8601 representation for @t.
+ */
 gchar *
 mrp_time2_to_string (MrpTime *t)
 {
@@ -1287,6 +1461,13 @@ mrp_time2_to_string (MrpTime *t)
 				t->hour, t->min, t->sec);
 }
 
+/**
+ * mrp_time2_set_epoch:
+ * @t: an #MrpTime
+ * @epoch: epoch
+ *
+ * Set @t according to the calendar time @epoch.
+ */
 void
 mrp_time2_set_epoch (MrpTime *t, time_t epoch)
 {
@@ -1296,6 +1477,13 @@ mrp_time2_set_epoch (MrpTime *t, time_t epoch)
 	mrp_time2_add_seconds (t, epoch);
 }
 
+/**
+ * mrp_time2_get_epoch:
+ * @t: an #MrpTime
+ * @Returns: epoch
+ *
+ * Return the calendar time corresponding to @t.
+ */
 time_t
 mrp_time2_get_epoch (MrpTime *t)
 {
@@ -1311,6 +1499,13 @@ mrp_time2_get_epoch (MrpTime *t)
 	return epoch;
 }
 
+/**
+ * mrp_time2_get_day_name:
+ * @t: an #MrpTime
+ * @Returns: static data
+ *
+ * Retrieves the name of the day of the specified time.
+ */
 const gchar *
 mrp_time2_get_day_name (MrpTime *t)
 {
@@ -1328,6 +1523,13 @@ mrp_time2_get_day_name (MrpTime *t)
 	return short_day_names[day];
 }
 
+/**
+ * mrp_time2_get_month_name:
+ * @t: an #MrpTime
+ * @Returns: static data
+ *
+ * Retrieves the name of the month of the specified time.
+ */
 const gchar *
 mrp_time2_get_month_name (MrpTime *t)
 {
@@ -1336,6 +1538,13 @@ mrp_time2_get_month_name (MrpTime *t)
 	return short_month_names[g_date_get_month (&t->date)-1];
 }
 
+/**
+ * mrp_time2_get_month_initial:
+ * @t: an #MrpTime
+ * @Returns: static data
+ *
+ * Retrieves the initial letter for the month of the specified time.
+ */
 const gchar *
 mrp_time2_get_month_initial (MrpTime *t)
 {
@@ -1363,6 +1572,14 @@ stolen_g_date_get_iso8601_week_of_year (const GDate *d)
   return w;
 }
 
+/**
+ * mrp_time2_get_week_number:
+ * @t: an #MrpTime
+ * @year: the year
+ * @Returns:  ISO 8601 week number
+ *
+ * Retrieves the week number of the specified time.
+ */
 gint
 mrp_time2_get_week_number (MrpTime *t, gint *year)
 {
@@ -1399,6 +1616,13 @@ mrp_time2_get_week_number (MrpTime *t, gint *year)
 	return week;
 }
 
+/**
+ * mrp_time2_align_prev:
+ * @t: an #MrpTime
+ * @unit: an #MrpTimeUnit
+ *
+ * Align @t to the previous @unit.
+ */
 void
 mrp_time2_align_prev (MrpTime *t, MrpTimeUnit unit)
 {
@@ -1501,6 +1725,13 @@ mrp_time2_align_prev (MrpTime *t, MrpTimeUnit unit)
 	}
 }
 
+/**
+ * mrp_time2_align_next:
+ * @t: an #MrpTime
+ * @unit: an #MrpTimeUnit
+ *
+ * Align @t to the next @unit.
+ */
 void
 mrp_time2_align_next (MrpTime *t, MrpTimeUnit unit)
 {
@@ -1607,6 +1838,13 @@ mrp_time2_align_next (MrpTime *t, MrpTimeUnit unit)
 	}
 }
 
+/**
+ * mrp_time2_copy:
+ * @dst: an #MrpTime
+ * @src: an #MrpTime
+ *
+ * Copy an #MrpTime.
+ */
 void
 mrp_time2_copy (MrpTime *dst, MrpTime *src)
 {
@@ -1616,12 +1854,26 @@ mrp_time2_copy (MrpTime *dst, MrpTime *src)
 	memcpy (src, dst, sizeof (MrpTime));
 }
 
+/**
+ * mrp_time2_clear:
+ * @t: an #MrpTime
+ *
+ * Clear an #MrpTime.
+ */
 void
 mrp_time2_clear (MrpTime *t)
 {
 	memset (t, 0, sizeof (MrpTime));
 }
 
+/**
+ * mrp_time2_compare:
+ * @t1: an #MrpTime
+ * @t2: an #MrpTime
+ * @Returns: -1, 0 or 1.
+ *
+ * Compare two #MrpTime.
+ */
 gint
 mrp_time2_compare (MrpTime *t1, MrpTime *t2)
 {

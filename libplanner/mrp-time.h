@@ -100,6 +100,14 @@ gboolean     mrp_time_decompose          (mrptime       t,
 mrptime      mrp_time_from_string        (const gchar  *str,
 					  GError      **err);
 gchar *      mrp_time_to_string          (mrptime       t);
+/**
+ * mrp_time_from_msdate_string:
+ * @Returns: an mrptime
+ * @str: A string.
+ *
+ * <warning>Unimplemented.</warning>
+ *
+ */
 mrptime      mrp_time_from_msdate_string (const gchar  *str);
 mrptime      mrp_time_align_day          (mrptime       t);
 mrptime      mrp_time_align_prev         (mrptime       t,
