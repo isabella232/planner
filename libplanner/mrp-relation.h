@@ -34,18 +34,10 @@
 
 /**
  * MrpRelation:
- * @parent:
- * @priv:
  *
  * Object representing a predecessor relation between two tasks.
  */
 typedef struct _MrpRelation     MrpRelation;
-/**
- * MrpRelationPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpRelationPriv MrpRelationPriv;
 
 #include <libplanner/mrp-task.h>

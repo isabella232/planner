@@ -123,8 +123,8 @@ typedef struct _MrpGroup      MrpGroup;
 typedef struct _MrpAssignment MrpAssignment;
 /**
  * MrpConstraint:
- * @type:
- * @time:
+ * @type: a constraint type.
+ * @time: a time.
  *
  * A struct representing a scheduling constraint on a task.
  */

@@ -126,6 +126,12 @@ mrptime      mrp_time_from_tm 		 (struct tm *tm);
  * New API here.
  */
 
+/**
+ * MrpTime:
+ *
+ * Broken-down time.
+ * A kind of standard C <type>struct tm</type>.
+ */
 typedef struct _MrpTime MrpTime;
 
 

@@ -40,25 +40,25 @@
 #define MRP_TYPE_RELATION               (mrp_relation_get_type ())
 
 typedef struct _MrpTaskClass MrpTaskClass;
-/**
- * MrpTaskPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpTaskPriv  MrpTaskPriv;
 
-/*
-  NOTE: moved from libplanner/mrp-task-manager.c to use
-         the structure in the src/planner-gantt-row.c
-         new fields are:
-           units      . worked units in the interval
-           units_full . expected worked units in the interval
-                        all resources that are working in the
-                        interval in the right percentage
-           res_n      . number of expected resources working
-                        at the task in the interval
-*/
+/**
+ * MrpUnitsInterval:
+ * @is_start: is start.
+ * @start: start time.
+ * @end: end time.
+ * @units: worked units in the interval.
+ * @units_full: expected worked units in the interval
+ * all resources that are working in the
+ * interval in the right percentage.
+ * @res_n: number of expected resources working
+ * at the task in the interval.
+ *
+ * [2006-04-11T12:42:44Z]
+ * NOTE: moved from libplanner/mrp-task-manager.c to use
+ * the structure in the src/planner-gantt-row.c
+ * new fields are: units,  units_full, res_n.
+ */
 typedef struct {
 	gboolean is_start;
 	mrptime  start;

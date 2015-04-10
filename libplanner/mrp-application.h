@@ -34,8 +34,6 @@
 
 /**
  * MrpApplication:
- * @parent:
- * @priv:
  *
  * Object representing the application using libmrproject. You need to
  * create an #MrpApplication object to create projects and use
@@ -43,12 +41,6 @@
  */
 typedef struct _MrpApplication      MrpApplication;
 typedef struct _MrpApplicationClass MrpApplicationClass;
-/**
- * MrpApplicationPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpApplicationPriv  MrpApplicationPriv;
 
 struct _MrpApplication {

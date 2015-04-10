@@ -46,12 +46,6 @@
  */
 typedef struct _MrpCalendar         MrpCalendar;
 typedef struct _MrpCalendarClass    MrpCalendarClass;
-/**
- * MrpCalendarPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpCalendarPriv     MrpCalendarPriv;
 /**
  * MrpInterval:
@@ -63,11 +57,30 @@ typedef struct _MrpInterval         MrpInterval;
 #include <libplanner/mrp-day.h>
 
 /* Used for saving calendar data. */
+
+/**
+ * MrpDayWithIntervals:
+ * @day: a day type.
+ * @intervals: a list of time intervals.
+ *
+ * Used for saving calendar data.
+ *
+ * Associate a @day type and time @intervals.
+ * A day type is composed of working periods.
+ */
 typedef struct {
 	MrpDay *day;
 	GList *intervals;
 } MrpDayWithIntervals;
 
+/**
+ * MrpDateWithDay:
+ * @date: a date.
+ * @day: a day type.
+ *
+ * Associate a @date and a @day type.
+ * Certain dates can have a peculiar day type.
+ */
 typedef struct {
 	mrptime date;
 	MrpDay *day;

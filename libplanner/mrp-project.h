@@ -43,12 +43,6 @@
  * Object representing a project.
  */
 typedef struct _MrpProject     MrpProject;
-/**
- * MrpProjectPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpProjectPriv MrpProjectPriv;
 
 #include <libplanner/mrp-resource.h>

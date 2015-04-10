@@ -36,12 +36,6 @@
 #define MRP_RESOURCE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_RESOURCE, MrpResourceClass))
 
 typedef struct _MrpResourceClass MrpResourceClass;
-/**
- * MrpResourcePriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpResourcePriv  MrpResourcePriv;
 
 #include <libplanner/mrp-calendar.h>

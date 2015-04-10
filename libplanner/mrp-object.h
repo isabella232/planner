@@ -40,12 +40,6 @@
  */
 typedef struct _MrpObject      MrpObject;
 typedef struct _MrpObjectClass MrpObjectClass;
-/**
- * MrpObjectPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpObjectPriv  MrpObjectPriv;
 
 struct _MrpObject {

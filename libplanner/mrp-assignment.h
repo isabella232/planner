@@ -35,12 +35,6 @@
 #define MRP_ASSIGNMENT_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_ASSIGNMENT, MrpAssignmentClass))
 
 typedef struct _MrpAssignmentClass MrpAssignmentClass;
-/**
- * MrpAssignmentPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpAssignmentPriv  MrpAssignmentPriv;
 
 struct _MrpAssignment {

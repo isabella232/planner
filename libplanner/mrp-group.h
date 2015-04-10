@@ -34,12 +34,6 @@
 #define MRP_GROUP_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MRP_TYPE_GROUP, MrpGroupClass))
 
 typedef struct _MrpGroupClass MrpGroupClass;
-/**
- * MrpGroupPriv:
- *
- * A private struct for internal use only.  The definition of this
- * structure is not publically available.
- */
 typedef struct _MrpGroupPriv  MrpGroupPriv;
 
 struct _MrpGroup {
