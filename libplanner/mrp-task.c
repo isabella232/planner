@@ -255,9 +255,10 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::task-moved:
-     * @mrptask: the object which received the signal.
-     * @arg1:
-     * @arg2:
+     * @task: the object which received the signal.
+     * @other_task: another #MrpTask.
+     *
+     * emitted when @other_task is moved.
      */
 	signals[TASK_MOVED] =
 		g_signal_new ("task_moved",
@@ -270,8 +271,10 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::relation-added:
-     * @mrptask: the object which received the signal.
-     * @arg1:
+     * @task: the object which received the signal.
+     * @relation: the added #MrpRelation.
+     *
+     * emitted when @relation is added.
      */
 	signals[RELATION_ADDED] =
 		g_signal_new ("relation_added",
@@ -284,8 +287,10 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::relation-removed:
-     * @mrptask: the object which received the signal.
-     * @arg1:
+     * @task: the object which received the signal.
+     * @relation: the removed #MrpRelation
+     *
+     * emitted when @relation is removed.
      */
 	signals[RELATION_REMOVED] =
 		g_signal_new ("relation_removed",
@@ -298,8 +303,10 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::assignment-added:
-     * @mrptask: the object which received the signal.
-     * @arg1:
+     * @task: the object which received the signal.
+     * @assignment: the added #MrpAssignment.
+     *
+     * emitted when @assignment is added.
      */
 	signals[ASSIGNMENT_ADDED] =
 		g_signal_new ("assignment_added",
@@ -313,8 +320,10 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::assignment-removed:
-     * @mrptask: the object which received the signal.
-     * @arg1:
+     * @task: the object which received the signal.
+     * @assignment: the removed #MrpAssignment.
+     *
+     * emitted when @assignment is removed.
      */
 	signals[ASSIGNMENT_REMOVED] =
 		g_signal_new ("assignment_removed",
@@ -328,7 +337,9 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::child-added:
-     * @mrptask: the object which received the signal.
+     * @task: the object which received the signal.
+     *
+     * emitted when a child is added.
      */
 	signals[CHILD_ADDED] =
 		g_signal_new ("child_added",
@@ -341,7 +352,9 @@ task_class_init (MrpTaskClass *klass)
 
     /**
      * MrpTask::child-removed:
-     * @mrptask: the object which received the signal.
+     * @task: the object which received the signal.
+     *
+     * emitted when a child is removed.
      */
 	signals[CHILD_REMOVED] =
 		g_signal_new ("child_removed",

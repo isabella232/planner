@@ -117,6 +117,12 @@ relation_class_init (MrpRelationClass *klass)
 	object_class->set_property = relation_set_property;
 	object_class->get_property = relation_get_property;
 
+    /**
+     * MrpRelation::changed:
+     * @relation: an #MrpRelation.
+     *
+     * emitted when @relation changes.
+     */
 	signals[CHANGED] = g_signal_new
 		("changed",
 		 G_TYPE_FROM_CLASS (klass),

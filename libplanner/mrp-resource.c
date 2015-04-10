@@ -238,8 +238,10 @@ resource_class_init (MrpResourceClass *klass)
 
     /**
      * MrpResource::assignment-added:
-     * @mrpresource: the object which received the signal.
-     * @arg1:
+     * @resource: the object which received the signal.
+     * @assignment: the added #MrpAssignment.
+     *
+     * emitted when @assignment is added.
      */
 	signals[ASSIGNMENT_ADDED] =
 		g_signal_new ("assignment_added",
@@ -253,8 +255,10 @@ resource_class_init (MrpResourceClass *klass)
 
     /**
      * MrpResource::assignment-removed:
-     * @mrpresource: the object which received the signal.
-     * @arg1:
+     * @resource: the object which received the signal.
+     * @assignment: the removed #MrpAssignment.
+     *
+     * emitted when @assignment is removed.
      */
 	signals[ASSIGNMENT_REMOVED] =
 		g_signal_new ("assignment_removed",

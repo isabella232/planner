@@ -203,7 +203,9 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::loaded:
-     * @mrpproject: the object which received the signal.
+     * @project: the object which received the signal.
+     *
+     * emitted when @project is loaded.
      */
 	signals[LOADED] = g_signal_new
 		("loaded",
@@ -216,8 +218,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::resource-added:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @resource: the added #MrpResource.
+     *
+     * emitted when @resource is added.
      */
 	signals[RESOURCE_ADDED] = g_signal_new
 		("resource_added",
@@ -231,8 +235,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::resource-removed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @resource: the removed #MrpResource.
+     *
+     * emitted when @resource is removed.
      */
 	signals[RESOURCE_REMOVED] = g_signal_new
 		("resource_removed",
@@ -246,8 +252,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::group-added:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @group: the added #MrpGroup.
+     *
+     * emitted when @group is added.
      */
 	signals[GROUP_ADDED] = g_signal_new
 		("group_added",
@@ -261,8 +269,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::group-removed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @group: the removed #MrpGroup.
+     *
+     * emitted when @group is removed.
      */
 	signals[GROUP_REMOVED] = g_signal_new
 		("group_removed",
@@ -276,8 +286,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::default-group-changed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @group: the changed #MrpGroup.
+     *
+     * emitted when default @group changes.
      */
 	signals[DEFAULT_GROUP_CHANGED] = g_signal_new
 		("default_group_changed",
@@ -291,8 +303,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::task-inserted:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @task: the inserted #MrpTask.
+     *
+     * emitted when @task is inserted.
      */
 	signals[TASK_INSERTED] = g_signal_new
 		("task_inserted",
@@ -306,8 +320,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::task-removed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @task: the removed #MrpTask.
+     *
+     * emitted when @task is removed.
      */
 	signals[TASK_REMOVED] = g_signal_new
 		("task_removed",
@@ -321,8 +337,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::task-moved:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @task: the moved #MrpTask.
+     *
+     * emitted when @task is moved.
      */
 	signals[TASK_MOVED] = g_signal_new
 		("task_moved",
@@ -336,8 +354,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::needs-saving-changed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @needs_saving: does @project need saving?
+     *
+     * emitted when @project need saving.
      */
 	signals[NEEDS_SAVING_CHANGED] = g_signal_new
 		("needs_saving_changed",
@@ -351,9 +371,11 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::property-added:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
-     * @arg2:
+     * @project: the object which received the signal.
+     * @object_type: an #MrpPropertyType.
+     * @property: the added #MrpProperty.
+     *
+     * emitted when @property is added.
      */
 	signals[PROPERTY_ADDED] = g_signal_new
 		("property_added",
@@ -367,8 +389,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::property-changed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @property: the changed #MrpProperty.
+     *
+     * emitted when @property is changed.
      */
 	signals[PROPERTY_CHANGED] = g_signal_new
 		("property_changed",
@@ -382,8 +406,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::property-removed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @property: the removed #MrpProperty.
+     *
+     * emitted when @property is removed.
      */
 	signals[PROPERTY_REMOVED] = g_signal_new
 		("property_removed",
@@ -397,8 +423,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::calendar-tree-changed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @calendar: the changed #MrpCalendar.
+     *
+     * emitted when @calendar is changed.
      */
 	signals[CALENDAR_TREE_CHANGED] = g_signal_new
 		("calendar_tree_changed",
@@ -412,8 +440,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::day-added:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @day: the added #MrpDay.
+     *
+     * emitted when @day is added.
      */
 	signals[DAY_ADDED] = g_signal_new
 		("day_added",
@@ -427,8 +457,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::day-removed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @day: the removed #MrpDay.
+     *
+     * emitted when @day is removed.
      */
 	signals[DAY_REMOVED] = g_signal_new
 		("day_removed",
@@ -442,8 +474,10 @@ project_class_init (MrpProjectClass *klass)
 
     /**
      * MrpProject::day-changed:
-     * @mrpproject: the object which received the signal.
-     * @arg1:
+     * @project: the object which received the signal.
+     * @day: the changed #MrpDay.
+     *
+     * emitted when @day is changed.
      */
 	signals[DAY_CHANGED] = g_signal_new
 		("day_changed",

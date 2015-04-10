@@ -155,10 +155,12 @@ calendar_class_init (MrpCalendarClass *klass)
 	object_class->get_property = calendar_get_property;
 	object_class->set_property = calendar_set_property;
 
-    /**
-     * MrpCalendar::calendar-changed:
-     * @mrpcalendar: the object which received the signal.
-     */
+	/**
+	 * MrpCalendar::calendar-changed:
+	 * @calendar: the object which received the signal.
+	 *
+	 * emitted when @calendar changes.
+	 */
 	signals[CALENDAR_CHANGED] =
 		g_signal_new ("calendar-changed",
 			      G_TYPE_FROM_CLASS (klass),
