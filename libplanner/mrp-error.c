@@ -37,6 +37,12 @@
 #include <config.h>
 #include "mrp-error.h"
 
+/**
+ * mrp_error_quark:
+ * @Returns: a #GQuark
+ *
+ * Get libplanner error domain.
+ */
 GQuark
 mrp_error_quark (void)
 {

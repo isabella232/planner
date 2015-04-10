@@ -138,6 +138,13 @@ GList *          mrp_task_set_unit_ivals            (MrpTask          *task,
 GList           *mrp_task_get_assignments           (MrpTask          *task);
 gint             mrp_task_get_nres                  (MrpTask          *task);
 
+/**
+ * mrp_task_get_fullwork:
+ * @task: a #MrpTask
+ * @Returns: an integer
+ *
+ * <warning>Unimplemented.</warning>
+ */
 gint             mrp_task_get_fullwork              (MrpTask          *task);
 MrpAssignment   *mrp_task_get_assignment            (MrpTask          *task,
 						     MrpResource      *resource);

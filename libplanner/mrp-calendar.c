@@ -427,8 +427,6 @@ foreach_copy_days (gpointer     key,
  * @parent: a #MrpCalendar to inherit from
  *
  * Add @calendar to the project
- *
- * Return value:
  **/
 void
 mrp_calendar_add (MrpCalendar *calendar, MrpCalendar *parent)

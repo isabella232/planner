@@ -674,6 +674,7 @@ mrp_object_get_id (MrpObject *object)
 /**
  * mrp_object_set_id:
  * @object: an #MrpObject
+ * @id: an id
  *
  * Change the unique object id in the application.
  * This function must be called only from Undo/Redo operations.
@@ -698,6 +699,13 @@ mrp_object_set_id (MrpObject *object,
 	}
 }
 
+/**
+ * mrp_object_get_project:
+ * @object: a libplanner object
+ * @Returns: The project @object belongs to
+ *
+ * to which project does @object belongs to?
+ */
 gpointer
 mrp_object_get_project (MrpObject *object)
 {

@@ -103,6 +103,13 @@ mrp_property_type_get_type (void)
 	return etype;
 }
 
+/**
+ * mrp_string_list_copy:
+ * @list: a list.
+ * @Returns: a copy.
+ *
+ * Copy a list of strings.
+ */
 GList *
 mrp_string_list_copy (const GList *list)
 {
@@ -121,6 +128,12 @@ mrp_string_list_copy (const GList *list)
 	return g_list_reverse (copy);
 }
 
+/**
+ * mrp_string_list_free:
+ * @list: a list
+ *
+ * Free a list of strings.
+ */
 void
 mrp_string_list_free (GList *list)
 {

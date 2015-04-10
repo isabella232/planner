@@ -1694,6 +1694,7 @@ mrp_task_get_unit_ivals (MrpTask *task)
 /**
  * mrp_task_set_unit_ivals:
  * @task: an #MrpTask
+ * @ivals: a list of intervals.
  *
  * Set the list of intervals of @task.
  *
@@ -1892,6 +1893,12 @@ mrp_task_get_cost (MrpTask *task)
 	return total;
 }
 
+/**
+ * mrp_task_invalidate_cost:
+ * @task: a task.
+ *
+ * invalidates @task cost.
+ */
 void
 mrp_task_invalidate_cost (MrpTask *task)
 {
@@ -2061,6 +2068,13 @@ imrp_task_peek_successors (MrpTask *task)
 	return task->priv->successors;
 }
 
+/**
+ * mrp_task_get_task_type:
+ * @task: a task.
+ * @Returns: a #MrpTaskType.
+ *
+ * get @task type.
+ */
 MrpTaskType
 mrp_task_get_task_type (MrpTask *task)
 {
@@ -2069,6 +2083,13 @@ mrp_task_get_task_type (MrpTask *task)
 	return task->priv->type;
 }
 
+/**
+ * mrp_task_get_sched:
+ * @task: a task.
+ * @Returns: a #MrpTaskSched.
+ *
+ * get @task scheduling type.
+ */
 MrpTaskSched
 mrp_task_get_sched (MrpTask *task)
 {
@@ -2077,6 +2098,13 @@ mrp_task_get_sched (MrpTask *task)
 	return task->priv->sched;
 }
 
+/**
+ * mrp_task_get_percent_complete:
+ * @task: a task.
+ * @Returns: a integer.
+ *
+ * get @task percent complete.
+ */
 gshort
 mrp_task_get_percent_complete (MrpTask *task)
 {
@@ -2085,6 +2113,13 @@ mrp_task_get_percent_complete (MrpTask *task)
 	return task->priv->percent_complete;
 }
 
+/**
+ * mrp_task_get_critical:
+ * @task: a task.
+ * @Returns: a boolean.
+ *
+ * is @task critical?
+ */
 gboolean
 mrp_task_get_critical (MrpTask *task)
 {

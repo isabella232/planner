@@ -1872,7 +1872,7 @@ sql_read_relations (SQLData *data, gint task_id)
 	return FALSE;
 }
 
-/**
+/*
  * Insert a task from the GNode tree into the project.
  */
 static gboolean

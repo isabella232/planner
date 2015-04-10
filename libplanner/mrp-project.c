@@ -1552,6 +1552,7 @@ mrp_project_get_uri (MrpProject *project)
 /**
  * mrp_project_set_uri:
  * @project: an #MrpProject
+ * @uri: an URI
  *
  * Sets the URI on @project.
  **/
@@ -1642,6 +1643,7 @@ imrp_project_add_calendar_day (MrpProject *project, MrpDay *day)
 /**
  * mrp_project_get_calendar_day_by_id:
  * @project: an #MrpProject
+ * @id: an id
  *
  * Semi-private function. You most likely won't need this outside of
  * Planner. Returns the day type associated with @id.
@@ -2425,6 +2427,13 @@ project_set_calendar (MrpProject  *project,
 	mrp_task_manager_recalc (priv->task_manager, TRUE);
 }
 
+/**
+ * mrp_project_set_block_scheduling:
+ * @project: an MrpProject.
+ * @block: new value.
+ *
+ * set block scheduling.
+ */
 void
 mrp_project_set_block_scheduling (MrpProject *project, gboolean block)
 {
@@ -2437,6 +2446,13 @@ mrp_project_set_block_scheduling (MrpProject *project, gboolean block)
 	mrp_task_manager_set_block_scheduling (priv->task_manager, block);
 }
 
+/**
+ * mrp_project_get_block_scheduling:
+ * @project: an MrpProject.
+ * @Returns: a boolean
+ *
+ * get block scheduling.
+ */
 gboolean
 mrp_project_get_block_scheduling (MrpProject *project)
 {
