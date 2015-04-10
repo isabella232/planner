@@ -26,6 +26,28 @@
  * SECTION:mrp-resource
  * @Short_description: represents a resource in the project.
  * @Title: MrpResource
+ * @include: libplanner/mrp-resource.h
+ *
+ * A resource has got a name.
+ *
+ * Resources come in #MrpResourceType: work, material.
+ *
+ * A resource has got a cost.
+ *
+ * A resource can belong to an #MrpGroup.
+ * An #MrpProject maintains a list of #MrpGroup and can designates one as the
+ * default. If you specify a default group, every new resource that you add
+ * will be placed in this group. Of course, you can still change the group to
+ * another as needed.
+ *
+ * A resource lists the assignments it is involved in.
+ * It knows about its assigned tasks.
+ *
+ * A resource can use its own #MrpCalendar instead of the project calendar.
+ *
+ * Resources are ordered.
+ *
+ * Administrative data can be associated: an email, a note.
  */
 
 #include <config.h>

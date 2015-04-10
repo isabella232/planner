@@ -22,7 +22,16 @@
 
 /**
  * SECTION:mrp-error
+ * @Short_Description: Error reporting.
  * @Title: MrpError
+ * @include: libplanner/mrp-error.h
+ *
+ * libplanner uses #GError to report errors.
+ *
+ * The #GQuark "mrp-error-quark" is used as the domain.
+ * Use #MRP_ERROR macro to get it.
+ *
+ * #MrpError lists the error codes used.
  */
 
 #include <config.h>

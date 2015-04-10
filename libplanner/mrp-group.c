@@ -22,7 +22,19 @@
 
 /**
  * SECTION:mrp-group
+ * @Short_Description: resource groups.
  * @Title: MrpGroup
+ * @include: libplanner/mrp-group.h
+ *
+ * Resources can be grouped.
+ * An #MrpResource can refer to a resource group as his.
+ *
+ * A resource group has got a name.
+ * A resource group has got a manager.
+ *
+ * An #MrpProject maintains a list of resource groups and can designates one as
+ * the default. If you specify a default group, every new #MrpResource that you
+ * add will be placed in this group.
  */
 
 #include <config.h>

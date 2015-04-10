@@ -24,7 +24,27 @@
 
 /**
  * SECTION:mrp-object
+ * @Short_Description: libplanner base class.
  * @Title: MrpObject
+ * @include: libplanner/mrp-object.h
+ *
+ * #MrpObject extends #GObject.
+ * Most of @libplanner entities are #MrpObject instances.
+ * Others are #GBoxed like #MrpInterval or #GEnum like #MrpTaskType.
+ * #MrpApplication is a #GObject.
+ *
+ * #MrpObject has no constructor.
+ *
+ * #MrpObject instances belong to a project.
+ *
+ * #MrpObject has properties.
+ *
+ * #MrpApplication can associate pointers to ids.
+ * #MrpObject uses the mechanism to register with
+ * #MrpApplication, gaining an id.
+ * mrp_application_id_get_data() retrieves an #MrpObject given its id.
+ *
+ * #MrpObject signals removal and modification.
  */
 
 #include <config.h>

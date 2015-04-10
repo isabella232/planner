@@ -24,7 +24,28 @@
 
 /**
  * SECTION:mrp-project
+ * @Short_description: Projects.
  * @Title: MrpProject
+ * @include: libplanner/mrp-project.h
+ *
+ * A project has got some properties.
+ * One can add his own properties.
+ *
+ * A project maintains a list of #MrpGroup and can designates one as the
+ * default. If you specify a default group, every new #MrpResource that you add
+ * will be placed in this group.
+ *
+ * A project maintains a list of resources.
+ *
+ * A project maintains a list of tasks.
+ * It can iterate over.
+ * Task management is delegated to a private @MrpTaskManager class.
+ *
+ * A project uses a calendar.
+ *
+ * Day types belong to a project.
+ *
+ * A project can define phases and switch from one to another.
  */
 
 #include <config.h>

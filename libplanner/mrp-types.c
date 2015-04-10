@@ -20,6 +20,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
+/**
+ * SECTION:mrp-types
+ * @Short_Description: miscellaneous declarations.
+ * @Title: MrpType
+ * @include: libplanner/mrp-types.h
+ *
+ * Miscellaneous declarations.
+ */
+
 #include <config.h>
 #include <glib.h>
 #include "mrp-types.h"

@@ -25,6 +25,20 @@
  * SECTION:mrp-application
  * @Short_description: the main project application object.
  * @Title: MrpApplication
+ * @include: libplanner/mrp-application.h
+ *
+ * #MrpApplication is the libplanner infrastructure.
+ * It loads #GModule plug-ins, registers file readers and writers.
+ *
+ * One must instantiate an #MrpApplication to use libplanner.
+ * A sole one can be instantiated.
+ *
+ * #MrpApplication also features a unique identifier generator.
+ * mrp_application_get_unique_id() generates a unique id within the application.
+ *
+ * #MrpApplication is able to register pointers against an id.
+ * mrp_application_id_get_data() retrieves the pointer given the id.
+ * Every #MrpObject registers itself this way.
  */
 
 #include <config.h>
@@ -247,7 +261,7 @@ mrp_application_get_unique_id (void)
 	return ++last_used_id;
 }
 
-/**
+/*
  * imrp_application_id_set_data:
  *
  * Set the data unique identifier for a data
@@ -269,6 +283,7 @@ imrp_application_id_set_data (gpointer data,
 
 /**
  * mrp_application_id_get_data:
+ * @object_id: an object id
  *
  * Get the object reference in the list of MrpObjects
  * using the object_id as locator
@@ -281,8 +296,9 @@ mrp_application_id_get_data (guint object_id)
 	return g_hash_table_lookup (data_hash, GUINT_TO_POINTER (object_id));
 }
 
-/**
+/*
  * mrp_application_id_get_data:
+ * @object_id: an object id
  *
  * Get the object reference in the list of MrpObjects
  * using the object_id as locator

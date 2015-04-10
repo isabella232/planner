@@ -23,7 +23,20 @@
 
 /**
  * SECTION:mrp-time
- * @Title: mrptime
+ * @Short_Description: represents date and time.
+ * @Title: MrpTime
+ * @include: libplanner/mrp-time.h
+ *
+ * Two APIs co-exists:
+ * Calendar time with #mrptime and
+ * broken-down time with #MrpTime.
+ *
+ * libplanner does not use #MrpTime.
+ *
+ * ISO 8601 representation is done in the basic format.
+ * Less separators are used:
+ * <literal>20150101T000000Z</literal> for <literal>2015-01-01T00:00:00Z</literal>.
+ *
  */
 
 #include <config.h>

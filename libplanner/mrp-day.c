@@ -23,7 +23,8 @@
 /**
  * SECTION:mrp-day
  * @Short_description: represents a day type in the project.
- * @Title: mrpday
+ * @Title: MrpDay
+ * @include: libplanner/mrp-day.h
  *
  * A day is a specific type of day, such as working day or non-working
  * day. Other examples might be custom types like half day, or a holiday.

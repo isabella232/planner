@@ -25,6 +25,7 @@
  * SECTION:mrp-calendar
  * @Short_description: represents a calendar in the project.
  * @Title: MrpCalendar
+ * @include: libplanner/mrp-calendar.h
  *
  * A calendar contains the information on working/nonworking time for
  * resources. A calendar has a default week, specifying the day types

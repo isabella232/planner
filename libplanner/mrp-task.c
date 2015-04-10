@@ -25,6 +25,38 @@
  * SECTION:mrp-task
  * @Short_description: represents a task in the project.
  * @Title: MrpTask
+ * @include: libplanner/mrp-task.h
+ *
+ * Tasks have a name.
+ *
+ * They form a tree: The work breakdown structure (WBS).
+ *
+ * A task is estimated in term of work effort, the mythical man-month.
+ *
+ * Some tasks are of the fixed-duration type.
+ * They still can consume resources.
+ * Some tasks are milestones.
+ * They take no time, no resource.
+ * They are just markers.
+ *
+ * A task have a time constraint.
+ * By default, it starts as soon as possible.
+ *
+ * Tasks are in logical precedence relationship with each other.
+ *
+ * A task lists the assignments it is involved in.
+ *
+ * During scheduling, start and finish times are calculated.
+ * CPM latest start and latest finish times are also calculated.
+ * Tasks belonging to the critical path are marked.
+ *
+ * A task have a cost.
+ *
+ * A task have a priority.
+ *
+ * A task can retain its progress.
+ *
+ * Because of non-working periods, work might begin after the task start.
  */
 
 #include <config.h>

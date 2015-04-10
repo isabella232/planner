@@ -25,6 +25,7 @@
  * SECTION:mrp-relation
  * @Short_description: represents a task predecessor relation in the project.
  * @Title: MrpRelation
+ * @include: libplanner/mrp-relation.h
  *
  * A predecessor relation is used to affect the scheduling of a task
  * relative another task.  A relation may have a lag time associated to it,

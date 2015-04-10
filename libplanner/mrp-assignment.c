@@ -22,7 +22,13 @@
 
 /**
  * SECTION:mrp-assignment
+ * @Short_Description: assigning resources to tasks.
  * @Title: MrpAssignment
+ * @include: libplanner/mrp-assignment.h
+ *
+ * Resources are assigned to tasks.
+ * #MrpAssignment implements the association between #MrpTask and #MrpResource.
+ * The association is pounded.
  */
 
 #include <config.h>
