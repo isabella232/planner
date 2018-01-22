@@ -1,26 +1,28 @@
 # Esperanto translation for planner.
 # Copyright (C) 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the planner package.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011, 2014.
-#
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011, 2014, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: planner master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=planner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-12-19 16:10+0000\n"
-"PO-Revision-Date: 2014-03-20 13:38+0100\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=planne"
+"r&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2017-04-08 15:29+0000\n"
+"PO-Revision-Date: 2018-01-22 20:00+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
-"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
 #: ../data/glade/add-predecessor.glade.h:1
+#, fuzzy
 msgid "Add Predecessor"
-msgstr ""
+msgstr "Aldoni antaŭulon"
 
 #: ../data/glade/add-predecessor.glade.h:2
 #: ../data/glade/calendar-dialog.glade.h:36
@@ -91,8 +93,7 @@ msgid "-"
 msgstr "-"
 
 #: ../data/glade/calendar-dialog.glade.h:14 ../data/glade/eds.glade.h:4
-#: ../data/glade/new-property.glade.h:5
-#: ../data/glade/resource-dialog.glade.h:6
+#: ../data/glade/new-property.glade.h:5 ../data/glade/resource-dialog.glade.h:6
 #: ../data/glade/resource-input-dialog.glade.h:5 ../data/glade/sql.glade.h:5
 #: ../data/glade/task-input-dialog.glade.h:5
 msgid "*"
@@ -234,14 +235,13 @@ msgstr ""
 msgid "_Description:"
 msgstr "_Priskribo:"
 
-#: ../data/glade/new-property.glade.h:4
-#: ../data/glade/resource-dialog.glade.h:2
+#: ../data/glade/new-property.glade.h:4 ../data/glade/resource-dialog.glade.h:2
 msgid "_Type:"
-msgstr "Speco"
+msgstr "_Speco:"
 
 #: ../data/glade/new-property.glade.h:6
 msgid "_Label:"
-msgstr "_Etikedo_"
+msgstr "_Etikedo:"
 
 #: ../data/glade/project-properties.glade.h:1
 msgid "Project Properties"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: ../data/glade/project-properties.glade.h:3
 msgid "_Start:"
-msgstr "_Komenco: "
+msgstr "_Komenco:"
 
 #: ../data/glade/project-properties.glade.h:4
 msgid "_Organization:"
@@ -272,8 +272,7 @@ msgid "_Phase:"
 msgstr ""
 
 #: ../data/glade/project-properties.glade.h:9
-#: ../data/glade/resource-dialog.glade.h:9
-#: ../data/glade/task-dialog.glade.h:14
+#: ../data/glade/resource-dialog.glade.h:9 ../data/glade/task-dialog.glade.h:14
 msgid "General"
 msgstr "Ĝenerale"
 
@@ -301,7 +300,7 @@ msgstr "R_etpoŝto:"
 #: ../data/glade/resource-dialog.glade.h:4
 #: ../data/glade/resource-input-dialog.glade.h:6
 msgid "_Group:"
-msgstr "Grupo:"
+msgstr "_Grupo:"
 
 #: ../data/glade/resource-dialog.glade.h:5
 msgid "C_ost:"
@@ -385,8 +384,7 @@ msgstr "fenestro"
 #. This is the verb "schedule"
 #. I18n: the verb "schedule" here.
 #: ../data/glade/task-date-widget.glade.h:3
-#: ../data/glade/task-dialog.glade.h:13
-#: ../src/planner-cell-renderer-date.c:139
+#: ../data/glade/task-dialog.glade.h:13 ../src/planner-cell-renderer-date.c:139
 msgid "Schedule:"
 msgstr ""
 
@@ -502,7 +500,7 @@ msgstr ""
 
 #: ../data/planner.schemas.in.h:2
 msgid ""
-"Whether to highlight the tasks along the cricital path in the Gantt view."
+"Whether to highlight the tasks along the critical path in the Gantt view."
 msgstr ""
 
 #: ../data/planner.schemas.in.h:3
@@ -519,7 +517,7 @@ msgstr ""
 
 #: ../data/planner.schemas.in.h:6
 msgid ""
-"Whether to highlight the tasks along the cricital path in the Task view."
+"Whether to highlight the tasks along the critical path in the Task view."
 msgstr ""
 
 #: ../data/planner.schemas.in.h:7
@@ -564,7 +562,7 @@ msgstr ""
 
 #: ../data/stylesheets/localizable.xml.h:3
 msgid "Start:"
-msgstr "Komenco: "
+msgstr "Komenco:"
 
 #: ../data/stylesheets/localizable.xml.h:4
 msgid "Finish:"
@@ -1126,7 +1124,7 @@ msgstr ""
 #: ../src/planner-resource-view.c:806 ../src/planner-resource-view.c:1760
 #: ../src/planner-task-view.c:370
 msgid "Work"
-msgstr ""
+msgstr "Laboro"
 
 #: ../src/planner-gantt-print.c:546 ../src/planner-gantt-row.c:771
 #: ../src/planner-html-plugin.c:120 ../src/planner-task-tree.c:1584
@@ -1410,7 +1408,7 @@ msgstr "GEOMETRIO"
 #, fuzzy
 #| msgid "FILES"
 msgid "FILES|URIs"
-msgstr "DOSIEROJ"
+msgstr "DOSIEROJ|URIs"
 
 #: ../src/planner-main.c:68
 msgid "- Planner project management"
@@ -1438,7 +1436,7 @@ msgstr ""
 
 #: ../src/planner-msp-plugin.c:117
 msgid "Couldn't import file."
-msgstr ""
+msgstr "Ne eblis enporti dosieron."
 
 #: ../src/planner-msp-plugin.c:205
 msgid "Import a File"
@@ -1819,11 +1817,11 @@ msgstr ""
 
 #: ../src/planner-sql-plugin.c:834
 msgid "Revision"
-msgstr ""
+msgstr "Revizio"
 
 #: ../src/planner-sql-plugin.c:1029
 msgid "Open from Database"
-msgstr ""
+msgstr "Malfermi de datumbazo"
 
 #: ../src/planner-task-cmd.c:96
 msgid "Link task"
@@ -1909,11 +1907,11 @@ msgstr "Ŝanĝi..."
 
 #: ../src/planner-task-dialog.c:2631
 msgid "Assigned"
-msgstr ""
+msgstr "Atribuita"
 
 #: ../src/planner-task-dialog.c:2648
 msgid "Units"
-msgstr ""
+msgstr "Unuoj"
 
 #: ../src/planner-task-dialog.c:2738
 msgid "Lag"
@@ -1945,7 +1943,7 @@ msgstr ""
 
 #: ../src/planner-task-popup.c:71 ../src/planner-usage-tree.c:105
 msgid "/_Edit task..."
-msgstr "/_Redakti taskon"
+msgstr "/_Redakti taskon..."
 
 #: ../src/planner-task-tree.c:561
 msgid "Remove task"
@@ -2143,7 +2141,7 @@ msgstr "E_lporti"
 
 #: ../src/planner-window.c:240
 msgid "Save _As..."
-msgstr "Konservi _kiel…"
+msgstr "Konservi _kiel..."
 
 #: ../src/planner-window.c:240
 msgid "Save the current project with a different name"
