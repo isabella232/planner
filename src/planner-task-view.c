@@ -851,7 +851,7 @@ task_view_load_columns (PlannerView *view)
 			    strcmp (id, "slack") == 0 ||
 			    strcmp (id, "cost") == 0 ||
 			    strcmp (id, "complete") == 0 ||
-			    strcmp (id, "assigned-to")) {
+			    strcmp (id, "assigned-to") == 0) {
 				gtk_tree_view_column_set_visible (column, TRUE);
 			} else {
 				gtk_tree_view_column_set_visible (column, FALSE);
