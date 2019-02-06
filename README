@@ -56,7 +56,7 @@ Installation
 
 Dependencies:
 
-GLIB 2.36.0
+GLIB 2.38.0
 GTK 2.24.0
 LIBGNOMECANVAS 2.10.0
 LIBGLADE 2.3.0

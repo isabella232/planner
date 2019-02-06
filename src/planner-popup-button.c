@@ -29,7 +29,7 @@
 typedef struct {
 	GtkWidget *popup_window;
 	GtkWidget *popup_widget;
-} PlannerPopupButtonPriv;
+} PlannerPopupButtonPrivate;
 
 static gboolean popup_button_press_event_cb  (GtkWidget          *popup_window,
 					      GdkEventButton     *event,
@@ -39,10 +39,9 @@ static void     popup_button_popup           (PlannerPopupButton *button);
 static void     popup_button_popdown         (PlannerPopupButton *button,
 					      gboolean            ok);
 
-
-#define GET_PRIV(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), PLANNER_TYPE_POPUP_BUTTON, PlannerPopupButtonPriv))
-
-G_DEFINE_TYPE (PlannerPopupButton, planner_popup_button, GTK_TYPE_TOGGLE_BUTTON);
+G_DEFINE_TYPE_WITH_PRIVATE (PlannerPopupButton,
+			    planner_popup_button,
+			    GTK_TYPE_TOGGLE_BUTTON);
 
 /* Signals */
 enum {
@@ -68,7 +67,6 @@ planner_popup_button_class_init (PlannerPopupButtonClass *klass)
 				       NULL, NULL,
 				       planner_marshal_OBJECT__VOID,
 				       GTK_TYPE_WIDGET, 0);
-
 	signals[POPDOWN] = g_signal_new ("popdown",
 					 G_TYPE_FROM_CLASS (klass),
 					 G_SIGNAL_RUN_LAST,
@@ -77,16 +75,14 @@ planner_popup_button_class_init (PlannerPopupButtonClass *klass)
 					 planner_marshal_VOID__OBJECT_BOOLEAN,
 					 G_TYPE_NONE, 2,
 					 GTK_TYPE_WIDGET, G_TYPE_BOOLEAN);
-
-	g_type_class_add_private (klass, sizeof (PlannerPopupButtonPriv));
 }
 
 static void
 planner_popup_button_init (PlannerPopupButton *button)
 {
-	PlannerPopupButtonPriv *priv;
+	PlannerPopupButtonPrivate *priv;
 
-	priv = GET_PRIV (button);
+	priv = planner_popup_button_get_instance_private (button);
 
 	priv->popup_window = gtk_window_new (GTK_WINDOW_POPUP);
 	gtk_window_set_resizable (GTK_WINDOW (priv->popup_window), FALSE);
@@ -191,14 +187,14 @@ popup_button_position (PlannerPopupButton *button,
 		       gint               *x,
 		       gint               *y)
 {
-	PlannerPopupButtonPriv *priv;
+	PlannerPopupButtonPrivate *priv;
 	GtkWidget              *button_widget;
 	GtkRequisition          popup_req;
 	GdkScreen              *screen;
 	gint                    monitor_num;
 	GdkRectangle            monitor;
 
-	priv = GET_PRIV (button);
+	priv = planner_popup_button_get_instance_private (button);
 
 	button_widget = GTK_WIDGET (button);
 
@@ -238,10 +234,10 @@ popup_button_position (PlannerPopupButton *button,
 static void
 popup_button_popup (PlannerPopupButton *button)
 {
-	PlannerPopupButtonPriv *priv;
+	PlannerPopupButtonPrivate *priv;
 	gint                    x, y;
 
-	priv = GET_PRIV (button);
+	priv = planner_popup_button_get_instance_private (button);
 
 	if (priv->popup_widget) {
 		return;
@@ -273,9 +269,9 @@ static void
 popup_button_popdown (PlannerPopupButton *button,
 		      gboolean            ok)
 {
-	PlannerPopupButtonPriv *priv;
+	PlannerPopupButtonPrivate *priv;
 
-	priv = GET_PRIV (button);
+	priv = planner_popup_button_get_instance_private (button);
 
 	if (!priv->popup_widget) {
 		return;

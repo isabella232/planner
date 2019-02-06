@@ -35,15 +35,13 @@ typedef struct {
 
 	mrptime            time;
 	MrpConstraintType  type;
-} PlannerTaskDateWidgetPriv;
-
+} PlannerTaskDateWidgetPrivate;
 
 static void task_date_widget_setup  (PlannerTaskDateWidget *widget);
 
-
-#define GET_PRIV(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), PLANNER_TYPE_TASK_DATE_WIDGET, PlannerTaskDateWidgetPriv))
-
-G_DEFINE_TYPE (PlannerTaskDateWidget, planner_task_date_widget, GTK_TYPE_FRAME);
+G_DEFINE_TYPE_WITH_PRIVATE (PlannerTaskDateWidget,
+			    planner_task_date_widget,
+			    GTK_TYPE_FRAME);
 
 /* Signals */
 enum {
@@ -64,7 +62,6 @@ planner_task_date_widget_class_init (PlannerTaskDateWidgetClass *klass)
 					       NULL, NULL,
 					       planner_marshal_VOID__VOID,
 					       G_TYPE_NONE, 0);
-
 	signals[CANCELLED] = g_signal_new ("cancelled",
 					   G_TYPE_FROM_CLASS (klass),
 					   G_SIGNAL_RUN_LAST,
@@ -72,8 +69,6 @@ planner_task_date_widget_class_init (PlannerTaskDateWidgetClass *klass)
 					   NULL, NULL,
 					   planner_marshal_VOID__VOID,
 					   G_TYPE_NONE, 0);
-
-	g_type_class_add_private (klass, sizeof (PlannerTaskDateWidgetPriv));
 }
 
 static void
@@ -148,10 +143,10 @@ static void
 task_date_widget_combo_changed_cb (GtkComboBox           *combo,
 				   PlannerTaskDateWidget *widget)
 {
-	PlannerTaskDateWidgetPriv *priv;
+	PlannerTaskDateWidgetPrivate *priv;
 	MrpConstraintType          type;
 
-	priv = GET_PRIV (widget);
+	priv = planner_task_date_widget_get_instance_private (widget);
 
 	type = planner_task_date_widget_get_constraint_type (widget);
 	gtk_widget_set_sensitive (priv->calendar, type != MRP_CONSTRAINT_ASAP);
@@ -168,14 +163,14 @@ task_date_widget_combo_changed_cb (GtkComboBox           *combo,
 static void
 task_date_widget_setup (PlannerTaskDateWidget *widget)
 {
-	PlannerTaskDateWidgetPriv *priv;
+	PlannerTaskDateWidgetPrivate *priv;
 	GladeXML                  *glade;
 	GtkWidget                 *vbox;
 	GtkWidget                 *root_vbox;
 	GtkWidget                 *button;
 	gchar                     *filename;
 
-	priv = GET_PRIV (widget);
+	priv = planner_task_date_widget_get_instance_private (widget);
 
 	vbox = gtk_vbox_new (FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (widget), vbox);
@@ -225,10 +220,10 @@ task_date_widget_setup (PlannerTaskDateWidget *widget)
 void
 planner_task_date_widget_set_date (PlannerTaskDateWidget *widget, mrptime t)
 {
-	PlannerTaskDateWidgetPriv *priv;
+	PlannerTaskDateWidgetPrivate *priv;
 	gint                       year, month, day;
 
-	priv = GET_PRIV (widget);
+	priv = planner_task_date_widget_get_instance_private (widget);
 
 	if (!mrp_time_decompose (t, &year, &month, &day, NULL, NULL, NULL)) {
 		return;
@@ -241,10 +236,10 @@ planner_task_date_widget_set_date (PlannerTaskDateWidget *widget, mrptime t)
 mrptime
 planner_task_date_widget_get_date (PlannerTaskDateWidget *widget)
 {
-	PlannerTaskDateWidgetPriv *priv;
+	PlannerTaskDateWidgetPrivate *priv;
 	gint                       year, month, day;
 
-	priv = GET_PRIV (widget);
+	priv = planner_task_date_widget_get_instance_private (widget);
 
 	gtk_calendar_get_date (GTK_CALENDAR (priv->calendar),
 			       &year, &month, &day);
@@ -257,10 +252,10 @@ void
 planner_task_date_widget_set_constraint_type (PlannerTaskDateWidget *widget,
 					      MrpConstraintType      type)
 {
-	PlannerTaskDateWidgetPriv *priv;
+	PlannerTaskDateWidgetPrivate *priv;
 	gint                       index;
 
-	priv = GET_PRIV (widget);
+	priv = planner_task_date_widget_get_instance_private (widget);
 
 	switch (type) {
 	case MRP_CONSTRAINT_ASAP:
@@ -283,10 +278,10 @@ planner_task_date_widget_set_constraint_type (PlannerTaskDateWidget *widget,
 MrpConstraintType
 planner_task_date_widget_get_constraint_type (PlannerTaskDateWidget *widget)
 {
-	PlannerTaskDateWidgetPriv *priv;
+	PlannerTaskDateWidgetPrivate *priv;
 	gint                       index;
 
-	priv = GET_PRIV (widget);
+	priv = planner_task_date_widget_get_instance_private (widget);
 
 	index = gtk_combo_box_get_active (GTK_COMBO_BOX (priv->combo));
 
