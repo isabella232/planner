@@ -12,14 +12,10 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.xml
 # e.g. DOC_SOURCE_DIR=$(top_srcdir)/gtk $(top_srcdir)/gdk
 DOC_SOURCE_DIR=$(top_srcdir)/libplanner
 
-# Extra options to pass to gtkdoc-scangobj. Not normally needed.
-SCANGOBJ_OPTIONS=
-
-# Extra options to supply to gtkdoc-scan
-#SCAN_OPTIONS=--deprecated-guards="GTK_ENABLE_BROKEN|GTK_DISABLE_DEPRECATED"
+# Extra options to supply to gtkdoc-scan.
+SCAN_OPTIONS=--rebuild-sections
 
 # Extra options to supply to gtkdoc-mkdb.
-# e.g. MKDB_OPTIONS=--xml-mode --output-format=xml
 MKDB_OPTIONS=--xml-mode --output-format=xml
 
 # Extra options to supply to gtkdoc-fixref
@@ -47,8 +43,7 @@ IGNORE_HFILES = \
   mrp-task-manager.h
 
 # Extra SGML files that are included by $(DOC_MAIN_SGML_FILE)
-# e.g. content_files=running.sgml building.sgml changes-2.0.sgml
-content_files=
+content_files =
 
 # CFLAGS and LDFLAGS for compiling scan program. Only needed
 # if $(DOC_MODULE).types is non-empty.
