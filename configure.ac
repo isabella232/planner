@@ -48,7 +48,11 @@ AM_GCONF_SOURCE_2
 dnl  -------------
 dnl | API docs    |--------------------------------------------
 dnl  -------------
+m4_ifdef([GTK_DOC_CHECK], [
 GTK_DOC_CHECK([1.14],[--flavour no-tmpl])
+],[
+AM_CONDITIONAL([ENABLE_GTK_DOC], false)
+])
 
 dnl NOTE: We need to use a separate automake conditional for this
 dnl       to make this work with the tarballs.
