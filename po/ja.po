@@ -1,16 +1,17 @@
 # planner (mrproject) ja.po.
-# Copyright (C) 2001-2006,2008,2009,2011 Free Software Foundation, Inc.
-# TAKEDA Hirofumi <takepin@turbolinux.co.jp>, 2001
-# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2006,2008,2009,2011.
-# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2012
+# Copyright (C) 2001-2006, 2008, 2009, 2011 2020Free Software Foundation, Inc.
+# TAKEDA Hirofumi <takepin@turbolinux.co.jp>, 2001.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2006, 2008, 2009, 2011.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2012.
+# sicklylife <translation@sicklylife.jp>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: planner master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/planner/issues\n"
 "POT-Creation-Date: 2018-06-10 18:10+0000\n"
-"PO-Revision-Date: 2012-08-12 10:01+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"PO-Revision-Date: 2020-01-07 22:30+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -483,10 +484,8 @@ msgid "Planner project plan"
 msgstr "Planner プロジェクト計画"
 
 #: ../data/planner.desktop.in.in.h:1
-#, fuzzy
-#| msgid "Planner Files"
 msgid "Planner"
-msgstr "Planner ファイル"
+msgstr "Planner"
 
 #: ../data/planner.desktop.in.in.h:2
 msgid "Project Management"
@@ -509,9 +508,6 @@ msgid "Highlight critical path in Gantt view"
 msgstr "Gantt グラフでクリティカルなパスを強調表示する"
 
 #: ../data/planner.schemas.in.h:2
-#, fuzzy
-#| msgid ""
-#| "Whether to highlight the tasks along the cricital path in the Gantt view."
 msgid ""
 "Whether to highlight the tasks along the critical path in the Gantt view."
 msgstr ""
@@ -530,9 +526,6 @@ msgid "Highlight critical path in Task view"
 msgstr "タスク表示でクリティカルなパスを強調表示する"
 
 #: ../data/planner.schemas.in.h:6
-#, fuzzy
-#| msgid ""
-#| "Whether to highlight the tasks along the cricital path in the Task view."
 msgid ""
 "Whether to highlight the tasks along the critical path in the Task view."
 msgstr ""
@@ -1432,10 +1425,8 @@ msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
 #: ../src/planner-main.c:45
-#, fuzzy
-#| msgid "FILES"
 msgid "FILES|URIs"
-msgstr "FILES"
+msgstr "FILES|URIs"
 
 #: ../src/planner-main.c:68
 msgid "- Planner project management"
@@ -2325,7 +2316,9 @@ msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
 "竹田 寛郁 <takepin@turbolinux.co.jp>\n"
-"日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
+"日本 GNOME ユーザー会 <http://www.gnome.gr.jp>\n"
+"Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"sicklylife <translation@sicklylife.jp>"
 
 #: ../src/planner-window.c:1185
 msgid "The Planner Homepage"
