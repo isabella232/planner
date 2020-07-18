@@ -7,22 +7,22 @@
 # Afonso Celso Medina <medina@maua.br>, 2004, 2005.
 # Leonardo Ferreira Fontenelle <leonardof@gnome.org>, 2007, 2008.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: planner.HEAD.pt_BR\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=planner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-07 22:06+0000\n"
-"PO-Revision-Date: 2016-02-24 08:02-0300\n"
-"Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/planner/issues\n"
+"POT-Creation-Date: 2020-07-10 20:09+0000\n"
+"PO-Revision-Date: 2020-07-18 11:47-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.7\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 3.36.0\n"
 
 #: ../data/glade/add-predecessor.glade.h:1
 msgid "Add Predecessor"
@@ -322,7 +322,7 @@ msgstr "Nome _curto:"
 #: ../data/glade/resource-dialog.glade.h:8
 #: ../data/glade/resource-input-dialog.glade.h:8
 msgid "Optional - overrides resource name in Gantt view."
-msgstr "Opcional - sobreescreve o nome do recurso na janela Gantt."
+msgstr "Opcional - sobrescreve o nome do recurso na janela Gantt."
 
 #: ../data/glade/resource-dialog.glade.h:10
 msgid ""
@@ -386,7 +386,7 @@ msgstr "Seleciona um projeto"
 msgid "The database contains the following projects. Select a project to open:"
 msgstr ""
 "O banco de dados contém os seguintes projetos. Selecione um projeto a "
-"seraberto:"
+"ser aberto:"
 
 #: ../data/glade/task-date-widget.glade.h:1
 msgid "window"
@@ -503,7 +503,7 @@ msgstr "Gerenciador de projetos Planner"
 
 #: ../data/planner.desktop.in.in.h:4
 msgid "Handle the tasks, resources, and cost of your projects"
-msgstr "Controla as tarefas, recursos e custos de seus projetos"
+msgstr "Controle as tarefas, recursos e custos de seus projetos"
 
 #: ../data/planner.desktop.in.in.h:5
 msgid "Gantt;Chart;Critical path;Relationship;Dependency;WBS;"
@@ -620,27 +620,27 @@ msgstr "Fase:"
 msgid "Unnamed Project"
 msgstr "Projeto sem nome"
 
-#: ../libplanner/mrp-day.c:54
+#: ../libplanner/mrp-day.c:64
 msgid "Working"
 msgstr "Útil"
 
-#: ../libplanner/mrp-day.c:55
+#: ../libplanner/mrp-day.c:65
 msgid "A default working day"
 msgstr "Um dia útil padrão"
 
-#: ../libplanner/mrp-day.c:57
+#: ../libplanner/mrp-day.c:67
 msgid "Nonworking"
 msgstr "Não útil"
 
-#: ../libplanner/mrp-day.c:58
+#: ../libplanner/mrp-day.c:68
 msgid "A default non working day"
 msgstr "Um dia não útil padrão"
 
-#: ../libplanner/mrp-day.c:60
+#: ../libplanner/mrp-day.c:70
 msgid "Use base"
 msgstr "Utiliza base"
 
-#: ../libplanner/mrp-day.c:61
+#: ../libplanner/mrp-day.c:71
 msgid "Use day from base calendar"
 msgstr "Utiliza o dia a partir de um calendário base"
 
@@ -659,72 +659,72 @@ msgstr "Impossível criar a árvore XML"
 msgid "Could not write XML file"
 msgstr "Impossível escrever o arquivo XML"
 
-#: ../libplanner/mrp-project.c:437 ../src/planner-group-dialog.c:842
+#: ../libplanner/mrp-project.c:582 ../src/planner-group-dialog.c:842
 msgid "Default"
 msgstr "Padrão"
 
-#: ../libplanner/mrp-project.c:715
+#: ../libplanner/mrp-project.c:860
 #, c-format
 msgid "Invalid URI: '%s'"
 msgstr "URI inválido: '%s'"
 
-#: ../libplanner/mrp-project.c:758
+#: ../libplanner/mrp-project.c:903
 #, c-format
 msgid "Couldn't find a suitable file module for loading '%s'"
 msgstr "Impossível encontrar um módulo de arquivo adequado para carregar '%s'"
 
-#: ../libplanner/mrp-project.c:779 ../libplanner/mrp-project.c:1063
+#: ../libplanner/mrp-project.c:924 ../libplanner/mrp-project.c:1208
 #, c-format
 msgid "No support for SQL storage built into this version of Planner."
 msgstr "Nenhum suporte para armazenamento SQL nesta versão do Planner."
 
-#: ../libplanner/mrp-project.c:816
+#: ../libplanner/mrp-project.c:961
 #, c-format
 msgid "Invalid URI."
 msgstr "URI Inválido."
 
-#: ../libplanner/mrp-project.c:957
+#: ../libplanner/mrp-project.c:1102
 #, c-format
 msgid "Unable to find file writer identified by '%s'"
 msgstr "Impossível encontrar escritor de arquivo identificado por '%s'"
 
-#: ../libplanner/mrp-project.c:1020
+#: ../libplanner/mrp-project.c:1165
 #, c-format
 msgid "Couldn't find a suitable file module for loading project"
 msgstr ""
 "Impossível encontrar um módulo de arquivo adequado para carregar o projeto"
 
-#: ../libplanner/mrp-property.c:365
+#: ../libplanner/mrp-property.c:376
 msgid "Text"
 msgstr "Texto"
 
-#: ../libplanner/mrp-property.c:367
+#: ../libplanner/mrp-property.c:378
 msgid "String list"
 msgstr "Lista de texto"
 
-#: ../libplanner/mrp-property.c:369
+#: ../libplanner/mrp-property.c:380
 msgid "Integer number"
 msgstr "Número inteiro"
 
-#: ../libplanner/mrp-property.c:371
+#: ../libplanner/mrp-property.c:382
 msgid "Floating-point number"
 msgstr "Número de ponto flutuante"
 
-#: ../libplanner/mrp-property.c:373
+#: ../libplanner/mrp-property.c:384
 msgid "Date"
 msgstr "Data"
 
-#: ../libplanner/mrp-property.c:375 ../src/planner-gantt-view.c:628
+#: ../libplanner/mrp-property.c:386 ../src/planner-gantt-view.c:628
 #: ../src/planner-task-view.c:371
 msgid "Duration"
 msgstr "Duração"
 
-#: ../libplanner/mrp-property.c:377 ../src/planner-gantt-view.c:630
+#: ../libplanner/mrp-property.c:388 ../src/planner-gantt-view.c:630
 #: ../src/planner-resource-view.c:1343 ../src/planner-task-view.c:373
 msgid "Cost"
 msgstr "Custo"
 
-#: ../libplanner/mrp-property.c:380 ../src/planner-project-properties.c:882
+#: ../libplanner/mrp-property.c:391 ../src/planner-project-properties.c:882
 msgid "None"
 msgstr "Nenhum"
 
@@ -794,7 +794,7 @@ msgstr "URI SQL inválida (id de projeto inválido)."
 msgid "Invalid SQL URI (no database name specified)."
 msgstr "URI SQL inválida (nenhum nome de banco de dados especificado)."
 
-#: ../libplanner/mrp-task.c:1068
+#: ../libplanner/mrp-task.c:1153
 #, c-format
 msgid ""
 "Could not add a predecessor relation, because the tasks are already related."
@@ -802,17 +802,17 @@ msgstr ""
 "Impossível adicionar uma relação de precedência, porque as tarefas já estão "
 "relacionadas."
 
-#: ../libplanner/mrp-task.c:1079
+#: ../libplanner/mrp-task.c:1164
 msgid "Start to Finish relation type cannot be combined with other relations."
 msgstr ""
 "A relação do tipo início para final não pode ser combinada com outras "
 "relações."
 
-#: ../libplanner/mrp-task.c:1081
+#: ../libplanner/mrp-task.c:1166
 msgid "Finish to Finish relation type cannot be combined with other relations."
 msgstr "A relação final para final não pode ser combinada com outras relações."
 
-#: ../libplanner/mrp-task.c:1098
+#: ../libplanner/mrp-task.c:1183
 msgid ""
 "Start to Finish relation type cannot be combined with Start No Earlier Than "
 "constraint."
@@ -820,7 +820,7 @@ msgstr ""
 "A relação do tipo início para final não pode ser combinada com a restrição "
 "Não Iniciar Antes De."
 
-#: ../libplanner/mrp-task.c:1100
+#: ../libplanner/mrp-task.c:1185
 msgid ""
 "Finish to Finish relation type cannot be combined with Start No Earlier Than "
 "constraint."
@@ -828,7 +828,7 @@ msgstr ""
 "A relação do tipo final para final não pode ser combinada com a restrição "
 "Não Iniciar Antes De."
 
-#: ../libplanner/mrp-task.c:1124
+#: ../libplanner/mrp-task.c:1209
 #, c-format
 msgid ""
 "Start to Finish relation cannot be set. Predecessor starts on project start "
@@ -1250,7 +1250,7 @@ msgstr "I_ndentar Tarefa"
 
 #: ../src/planner-gantt-view.c:160 ../src/planner-task-view.c:141
 msgid "Indent the selected tasks"
-msgstr "Indenta a tarefa selecionada"
+msgstr "Indenta as tarefas selecionadas"
 
 #: ../src/planner-gantt-view.c:162 ../src/planner-task-view.c:143
 msgid "Unin_dent Task"
@@ -1503,6 +1503,7 @@ msgstr "Remove a fase"
 msgid "Could not open plugin file '%s'\n"
 msgstr "Impossível abrir arquivo de plugin '%s'\n"
 
+#. i18n: finish-to-start, not sure if it should be translated...
 #: ../src/planner-predecessor-model.c:191 ../src/planner-task-dialog.c:2211
 msgid "FS"
 msgstr "FI"
@@ -1751,6 +1752,7 @@ msgstr "Sm %d"
 msgid "Week %d"
 msgstr "Semana %d"
 
+#. i18n: Week, year.
 #: ../src/planner-scale-utils.c:139
 #, c-format
 msgid "Week %d, %d"
@@ -2420,7 +2422,7 @@ msgstr ""
 "Pode-se adicionar uma relação de precedência clicando no predecessor e "
 "arrastando-o sobre o sucessor.\n"
 "\n"
-"Após efetuar isto, pode-se remover todas as restrições selecionando o ítem "
+"Após efetuar isto, pode-se remover todas as restrições selecionando o item "
 "'Remover todas as restrições' no menu 'Editar'."
 
 #. Hack.
@@ -2485,7 +2487,7 @@ msgstr "URI de servidor inválida"
 #. source = book_target->source;
 #: ../eds-backend/planner-source/planner-source.c:125
 msgid "Select planner file"
-msgstr "Seecionar arquivo do Planner"
+msgstr "Selecionar arquivo do Planner"
 
 #: ../eds-backend/planner-source/planner-source.c:157
 #, c-format
