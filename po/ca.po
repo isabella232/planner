@@ -347,7 +347,7 @@ msgid ""
 "Select the calendar to use for this resource. If you want to use the default "
 "calendar of the project, select 'None'. "
 msgstr ""
-"Seleccioneu el calendari per a utilitzar per aquest recurs. Si voleu "
+"Seleccioneu el calendari per a utilitzar per a aquest recurs. Si voleu "
 "utilitzar el calendari predeterminat del projecte, seleccioneu «Cap». "
 
 #: ../data/glade/resource-dialog.glade.h:11
@@ -834,7 +834,7 @@ msgstr "URI d'SQL invàlida (ha de començar amb «sql://» i contenir «#»)."
 #: ../libplanner/mrp-storage-sql.c:275
 #, c-format
 msgid "Invalid SQL URI (invalid project id)."
-msgstr "URI d'SQL invàlida (id del projecte invàlid)"
+msgstr "URI d'SQL invàlida (id del projecte invàlid)."
 
 #: ../libplanner/mrp-storage-sql.c:283
 #, c-format
@@ -1323,7 +1323,7 @@ msgstr "Sagna les tasques seleccionades"
 #
 #: ../src/planner-gantt-view.c:162 ../src/planner-task-view.c:143
 msgid "Unin_dent Task"
-msgstr "De_sagna la tasca"
+msgstr "_Desfés el sagnat la tasca"
 
 #: ../src/planner-gantt-view.c:163 ../src/planner-task-view.c:144
 msgid "Unindent the selected tasks"
