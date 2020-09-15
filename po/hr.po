@@ -5,15 +5,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: planner 0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/planner/issues\n"
-"POT-Creation-Date: 2019-06-22 20:59+0000\n"
-"PO-Revision-Date: 2019-09-06 19:11+0200\n"
-"Last-Translator: gogo <linux.hr@protonmail.com>\n"
+"POT-Creation-Date: 2020-07-10 20:09+0000\n"
+"PO-Revision-Date: 2020-09-15 20:14+0200\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
@@ -791,22 +791,30 @@ msgstr ""
 #: ../libplanner/mrp-task.c:1164
 msgid "Start to Finish relation type cannot be combined with other relations."
 msgstr ""
+"Od početka do kraja - vrsta relacije ne može se kombinirati s drugim "
+"relacijama."
 
 #: ../libplanner/mrp-task.c:1166
 msgid "Finish to Finish relation type cannot be combined with other relations."
 msgstr ""
+"Od kraja do kraja - vrsta relacije ne može se kombinirati s drugim "
+"relacijama."
 
 #: ../libplanner/mrp-task.c:1183
 msgid ""
 "Start to Finish relation type cannot be combined with Start No Earlier Than "
 "constraint."
 msgstr ""
+"Od početka do kraja - vrsta relacije ne može se kombinirati s ograničenjem - "
+"Ne počni ranije od."
 
 #: ../libplanner/mrp-task.c:1185
 msgid ""
 "Finish to Finish relation type cannot be combined with Start No Earlier Than "
 "constraint."
 msgstr ""
+"Od kraja do kraja - vrsta relacije ne može se kombinirati s ograničenjem - "
+"Ne počni ranije od."
 
 #: ../libplanner/mrp-task.c:1209
 #, c-format
@@ -814,6 +822,8 @@ msgid ""
 "Start to Finish relation cannot be set. Predecessor starts on project start "
 "date."
 msgstr ""
+"Od početka do kraja - relacija se ne može postaviti. Prethodnik počinje na "
+"datum početka projekta."
 
 #: ../libplanner/mrp-task-manager.c:2603
 #, c-format
@@ -1926,7 +1936,7 @@ msgstr "Nemoguće dodavanje prethodnika. Nema odabranog zadatka!"
 
 #: ../src/planner-task-dialog.c:2457
 msgid "Change..."
-msgstr "Promijeni…"
+msgstr "Promijeni..."
 
 #: ../src/planner-task-dialog.c:2631
 msgid "Assigned"
