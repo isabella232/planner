@@ -430,7 +430,7 @@ msgid ""
 "No earlier than\n"
 "On fixed date"
 msgstr ""
-"El més aviat possible\n"
+"Com més aviat millor\n"
 "No abans que\n"
 "En una data fixa"
 
@@ -964,7 +964,7 @@ msgstr "Afegeix un calendari nou"
 
 #: ../src/planner-cell-renderer-date.c:146 ../src/planner-task-dialog.c:1485
 msgid "As soon as possible"
-msgstr "El més aviat possible"
+msgstr "Com més aviat millor"
 
 #
 #: ../src/planner-cell-renderer-date.c:147
@@ -1543,7 +1543,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Executeu «%s --help» per veure la llista d'opcions disponibles de la "
+"Executeu «%s --help» per a veure la llista d'opcions disponibles de la "
 "línia d'ordres.\n"
 
 #: ../src/planner-main.c:91
@@ -2063,7 +2063,7 @@ msgstr "En una data fixa %s"
 
 #: ../src/planner-task-dialog.c:1909
 msgid "Finish to start (FS)"
-msgstr "Acaba la tasca per començar (AC)"
+msgstr "Acaba la tasca per a començar (AC)"
 
 #: ../src/planner-task-dialog.c:1910
 msgid "Finish to finish (FF)"
