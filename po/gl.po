@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PLANNER package.
 # Copyright (C) 2007
 # Iván Méndez <imendez@udc.es>, 2007.
-# Fran Dieguez <frandieguez@gnome.org>, 2013.
+# Fran Dieguez <frandieguez@gnome.org>, 2013-2021.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-23 02:26+0200\n"
-"PO-Revision-Date: 2013-09-23 02:29+0200\n"
+"Project-Id-Version: unnamed project\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/planner/issues\n"
+"POT-Creation-Date: 2020-07-10 20:09+0000\n"
+"PO-Revision-Date: 2021-02-09 13:24+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: gnome-l10n-gl@gnome.org\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: ../data/glade/add-predecessor.glade.h:1
 msgid "Add Predecessor"
@@ -95,8 +96,7 @@ msgid "-"
 msgstr "-"
 
 #: ../data/glade/calendar-dialog.glade.h:14 ../data/glade/eds.glade.h:4
-#: ../data/glade/new-property.glade.h:5
-#: ../data/glade/resource-dialog.glade.h:6
+#: ../data/glade/new-property.glade.h:5 ../data/glade/resource-dialog.glade.h:6
 #: ../data/glade/resource-input-dialog.glade.h:5 ../data/glade/sql.glade.h:5
 #: ../data/glade/task-input-dialog.glade.h:5
 msgid "*"
@@ -238,8 +238,7 @@ msgstr "Engadir propiedade"
 msgid "_Description:"
 msgstr "_Descrición:"
 
-#: ../data/glade/new-property.glade.h:4
-#: ../data/glade/resource-dialog.glade.h:2
+#: ../data/glade/new-property.glade.h:4 ../data/glade/resource-dialog.glade.h:2
 msgid "_Type:"
 msgstr "_Tipo"
 
@@ -276,8 +275,7 @@ msgid "_Phase:"
 msgstr "_Fase:"
 
 #: ../data/glade/project-properties.glade.h:9
-#: ../data/glade/resource-dialog.glade.h:9
-#: ../data/glade/task-dialog.glade.h:14
+#: ../data/glade/resource-dialog.glade.h:9 ../data/glade/task-dialog.glade.h:14
 msgid "General"
 msgstr "Xeral"
 
@@ -393,8 +391,7 @@ msgstr "ventá"
 #. This is the verb "schedule"
 #. I18n: the verb "schedule" here.
 #: ../data/glade/task-date-widget.glade.h:3
-#: ../data/glade/task-dialog.glade.h:13
-#: ../src/planner-cell-renderer-date.c:139
+#: ../data/glade/task-dialog.glade.h:13 ../src/planner-cell-renderer-date.c:139
 msgid "Schedule:"
 msgstr "Planificación:"
 
@@ -512,11 +509,12 @@ msgid "Highlight critical path in Gantt view"
 msgstr "Marcar o camiño crítico na vista do Gantt"
 
 #: ../data/planner.schemas.in.h:2
+#| msgid ""
+#| "Whether to highlight the tasks along the cricital path in the Gantt view."
 msgid ""
-"Whether to highlight the tasks along the cricital path in the Gantt view."
+"Whether to highlight the tasks along the critical path in the Gantt view."
 msgstr ""
-"Indique se se deben marcar as tarefas ao longo do camiño crítico na vista do "
-"Gantt."
+"Indica se realzar as tarefas ao longo do camiño crítico na vista de Gantt."
 
 #: ../data/planner.schemas.in.h:3
 msgid "Display nonstandard days in Gantt view"
@@ -531,11 +529,12 @@ msgid "Highlight critical path in Task view"
 msgstr "Marcar o camiño crítico na vista de Tarefa"
 
 #: ../data/planner.schemas.in.h:6
+#| msgid ""
+#| "Whether to highlight the tasks along the cricital path in the Task view."
 msgid ""
-"Whether to highlight the tasks along the cricital path in the Task view."
+"Whether to highlight the tasks along the critical path in the Task view."
 msgstr ""
-"Indique se se debe marcar as tarefas ao longo do camiño crítico na vista da "
-"Tarefa."
+"Indica se realzar as tarefas ao longo do camiño crítico na vista de Tarefas."
 
 #: ../data/planner.schemas.in.h:7
 msgid "Print the Gantt view"
@@ -617,27 +616,27 @@ msgstr "Fase:"
 msgid "Unnamed Project"
 msgstr "Proxecto sen nome"
 
-#: ../libplanner/mrp-day.c:54
+#: ../libplanner/mrp-day.c:64
 msgid "Working"
 msgstr "Xornada laboral"
 
-#: ../libplanner/mrp-day.c:55
+#: ../libplanner/mrp-day.c:65
 msgid "A default working day"
 msgstr "Un día laboral predeterminado"
 
-#: ../libplanner/mrp-day.c:57
+#: ../libplanner/mrp-day.c:67
 msgid "Nonworking"
 msgstr "Xornada de lecer"
 
-#: ../libplanner/mrp-day.c:58
+#: ../libplanner/mrp-day.c:68
 msgid "A default non working day"
 msgstr "Un día de lecer predeterminado"
 
-#: ../libplanner/mrp-day.c:60
+#: ../libplanner/mrp-day.c:70
 msgid "Use base"
 msgstr "Usar base"
 
-#: ../libplanner/mrp-day.c:61
+#: ../libplanner/mrp-day.c:71
 msgid "Use day from base calendar"
 msgstr "Usar un día do calendario base"
 
@@ -656,73 +655,73 @@ msgstr "Non se pode crear a árbore de XML"
 msgid "Could not write XML file"
 msgstr "Non se puido gravar o ficheiro de XML"
 
-#: ../libplanner/mrp-project.c:437 ../src/planner-group-dialog.c:842
+#: ../libplanner/mrp-project.c:582 ../src/planner-group-dialog.c:842
 msgid "Default"
 msgstr "Por omisión"
 
-#: ../libplanner/mrp-project.c:715
+#: ../libplanner/mrp-project.c:860
 #, c-format
 msgid "Invalid URI: '%s'"
 msgstr "O URI non é válido: '%s'"
 
-#: ../libplanner/mrp-project.c:758
+#: ../libplanner/mrp-project.c:903
 #, c-format
 msgid "Couldn't find a suitable file module for loading '%s'"
 msgstr "Non se puido achar un ficheiro apropiado para cargar '%s'"
 
-#: ../libplanner/mrp-project.c:779 ../libplanner/mrp-project.c:1063
+#: ../libplanner/mrp-project.c:924 ../libplanner/mrp-project.c:1208
 #, c-format
 msgid "No support for SQL storage built into this version of Planner."
 msgstr ""
 "Non é compatible co almacenamento de SQL compilado nesta versión do Planner."
 
-#: ../libplanner/mrp-project.c:816
+#: ../libplanner/mrp-project.c:961
 #, c-format
 msgid "Invalid URI."
 msgstr "O URI non é válido."
 
-#: ../libplanner/mrp-project.c:957
+#: ../libplanner/mrp-project.c:1102
 #, c-format
 msgid "Unable to find file writer identified by '%s'"
 msgstr "Non é posible achar o escritor de ficheiros identificado por '%s'"
 
-#: ../libplanner/mrp-project.c:1020
+#: ../libplanner/mrp-project.c:1165
 #, c-format
 msgid "Couldn't find a suitable file module for loading project"
 msgstr ""
 "Non se puido achar un módulo de ficheiro axeitado para cargar o proxecto"
 
-#: ../libplanner/mrp-property.c:365
+#: ../libplanner/mrp-property.c:376
 msgid "Text"
 msgstr "Texto"
 
-#: ../libplanner/mrp-property.c:367
+#: ../libplanner/mrp-property.c:378
 msgid "String list"
 msgstr "Listaxe de cadeas"
 
-#: ../libplanner/mrp-property.c:369
+#: ../libplanner/mrp-property.c:380
 msgid "Integer number"
 msgstr "Número enteiro"
 
-#: ../libplanner/mrp-property.c:371
+#: ../libplanner/mrp-property.c:382
 msgid "Floating-point number"
 msgstr "Número de coma flotante"
 
-#: ../libplanner/mrp-property.c:373
+#: ../libplanner/mrp-property.c:384
 msgid "Date"
 msgstr "Data"
 
-#: ../libplanner/mrp-property.c:375 ../src/planner-gantt-view.c:628
+#: ../libplanner/mrp-property.c:386 ../src/planner-gantt-view.c:628
 #: ../src/planner-task-view.c:371
 msgid "Duration"
 msgstr "Duración"
 
-#: ../libplanner/mrp-property.c:377 ../src/planner-gantt-view.c:630
+#: ../libplanner/mrp-property.c:388 ../src/planner-gantt-view.c:630
 #: ../src/planner-resource-view.c:1343 ../src/planner-task-view.c:373
 msgid "Cost"
 msgstr "Custo"
 
-#: ../libplanner/mrp-property.c:380 ../src/planner-project-properties.c:882
+#: ../libplanner/mrp-property.c:391 ../src/planner-project-properties.c:882
 msgid "None"
 msgstr "Nada"
 
@@ -756,7 +755,8 @@ msgstr ""
 #: ../libplanner/mrp-sql.c:2272 ../libplanner/mrp-sql.c:3711
 msgid "Failed to create a dictionary for the database connection.\n"
 msgstr ""
-"Produciuse un fallo ao crear un dicionario para a conexión da base de datos.\n"
+"Produciuse un fallo ao crear un dicionario para a conexión da base de "
+"datos.\n"
 
 #: ../libplanner/mrp-sql.c:2286
 #, c-format
@@ -792,7 +792,7 @@ msgstr "O URI do SQL non é válido (o identificado do proxecto non é válido)"
 msgid "Invalid SQL URI (no database name specified)."
 msgstr "O URI do SQL non é válido (non se especificou o nome da base de datos)"
 
-#: ../libplanner/mrp-task.c:1068
+#: ../libplanner/mrp-task.c:1153
 #, c-format
 msgid ""
 "Could not add a predecessor relation, because the tasks are already related."
@@ -800,19 +800,19 @@ msgstr ""
 "Non é posible engadir a relación predecesora xa que as tarefas xa están "
 "relacionadas"
 
-#: ../libplanner/mrp-task.c:1079
+#: ../libplanner/mrp-task.c:1164
 msgid "Start to Finish relation type cannot be combined with other relations."
 msgstr ""
 "Unha relación do tipo Comezo a remate non se pode combinar con outras "
 "relacións"
 
-#: ../libplanner/mrp-task.c:1081
+#: ../libplanner/mrp-task.c:1166
 msgid "Finish to Finish relation type cannot be combined with other relations."
 msgstr ""
 "Unha relación do tipo Remate a remate non se pode combinar con outras "
 "relacións"
 
-#: ../libplanner/mrp-task.c:1098
+#: ../libplanner/mrp-task.c:1183
 msgid ""
 "Start to Finish relation type cannot be combined with Start No Earlier Than "
 "constraint."
@@ -820,7 +820,7 @@ msgstr ""
 "Unha relación do tipo Comezo a remate non se pode combinar cun impedimento "
 "Comezar non antes que."
 
-#: ../libplanner/mrp-task.c:1100
+#: ../libplanner/mrp-task.c:1185
 msgid ""
 "Finish to Finish relation type cannot be combined with Start No Earlier Than "
 "constraint."
@@ -828,7 +828,7 @@ msgstr ""
 "Unha relación do tipo Remate a remate non se pode combinar cun impedimento "
 "de tipo Comezar non antes que"
 
-#: ../libplanner/mrp-task.c:1124
+#: ../libplanner/mrp-task.c:1209
 #, c-format
 msgid ""
 "Start to Finish relation cannot be set. Predecessor starts on project start "
@@ -1501,6 +1501,7 @@ msgstr "Eliminar fase"
 msgid "Could not open plugin file '%s'\n"
 msgstr "Non foi posible abrir o ficheiro do complemento '%s'\n"
 
+#. i18n: finish-to-start, not sure if it should be translated...
 #: ../src/planner-predecessor-model.c:191 ../src/planner-task-dialog.c:2211
 msgid "FS"
 msgstr "RC"
@@ -1749,6 +1750,7 @@ msgstr "Sm %d"
 msgid "Week %d"
 msgstr "Semana %d"
 
+#. i18n: Week, year.
 #: ../src/planner-scale-utils.c:139
 #, c-format
 msgid "Week %d, %d"
